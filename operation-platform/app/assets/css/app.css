@@ -12,7 +12,7 @@ body {
     font-weight: 300;
     line-height: 1.5em;
     text-align: center;
-    background-image: url("../Login_BG.jpg");
+    background-image: url("../img/Login_BG.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -29,7 +29,7 @@ body {
     height: 60px;
     cursor:pointer;
     font-size: 24px;
-    font-family: 微软雅黑;
+    font-family: "Times New Roman";
     background-color: #426fc5;
 
 }

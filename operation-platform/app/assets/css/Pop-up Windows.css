@@ -267,11 +267,6 @@ input.btn {
 	display:none;
 	box-shadow: 0 0 10px #666;
 }
-.theme-poptit {
-	border-bottom:1px solid #ddd;
-	padding:12px;
-	position: relative;
-}
 .theme-popbod {
 	padding:60px 15px;
 	color:#444;
@@ -287,7 +282,12 @@ input.btn {
 .theme-popbom a {
 	margin-left:8px
 }
-.theme-poptit .close {
+.theme-poptit1 {
+	border-bottom:1px solid #ddd;
+	padding:12px;
+	position: relative;
+}
+.theme-poptit1 .close {
 	float:right;
 	color:#999;
 	padding:5px;
@@ -295,7 +295,39 @@ input.btn {
 	font:bold 14px/14px simsun;
 	text-shadow:0 1px 0 #ddd
 }
-.theme-poptit .close:hover {
+.theme-poptit1 .close:hover {
+	color:#444;
+}
+.theme-poptit2 {
+	border-bottom:1px solid #ddd;
+	padding:12px;
+	position: relative;
+}
+.theme-poptit2 .close {
+	float:right;
+	color:#999;
+	padding:5px;
+	margin:-2px -5px -5px;
+	font:bold 14px/14px simsun;
+	text-shadow:0 1px 0 #ddd
+}
+.theme-poptit2 .close:hover {
+	color:#444;
+}
+.theme-poptit3 {
+	border-bottom:1px solid #ddd;
+	padding:12px;
+	position: relative;
+}
+.theme-poptit3 .close {
+	float:right;
+	color:#999;
+	padding:5px;
+	margin:-2px -5px -5px;
+	font:bold 14px/14px simsun;
+	text-shadow:0 1px 0 #ddd
+}
+.theme-poptit3 .close:hover {
 	color:#444;
 }
 .btn.theme-reg {

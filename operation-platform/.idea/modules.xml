@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/cpts_852_bnc.iml" filepath="$PROJECT_DIR$/.idea/cpts_852_bnc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/operation-platform.iml" filepath="$PROJECT_DIR$/.idea/operation-platform.iml" />
     </modules>
   </component>
 </project>
