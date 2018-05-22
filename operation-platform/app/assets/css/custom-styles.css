@@ -1,4 +1,4 @@
-/*----------------------------------------------
+ /*----------------------------------------------
     COMMON  STYLES    
 ------------------------------------------------*/
 body {
@@ -326,12 +326,9 @@ padding-top: 4px;
 .sidebar-collapse > .nav > li {
 	border-bottom: 1px solid rgba(107, 108, 109, 0.19);
 }
-ul.nav.nav-second-level.collapse.in {
-background: #172D44;
-}
 .sidebar-collapse .nav > li > a:hover,
 .sidebar-collapse .nav > li > a:focus {
-	 
+    background: #172D44;
 	outline:0;
 }
  

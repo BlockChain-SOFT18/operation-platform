@@ -4,57 +4,6 @@
     <meta charset="utf-8">
     <link href="assets/css/app.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/Pop-up Windows.css" type="text/css" media="all">
-    <script src="assets/js/jquery.min.js"></script>
-    <!-- JS Scripts-->
-    <!-- jQuery Js -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- Bootstrap Js -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Metis Menu Js -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
-
-    <script>
-        jQuery(document).ready(function($) {
-            $('.theme-login1').click(function(){
-                $('.theme-popover1-mask').fadeIn(100);
-                $('.theme-popover1').slideDown(200);
-            });
-            $('.theme-login2').click(function(){
-                $('.theme-popover2-mask').fadeIn(100);
-                $('.theme-popover2').slideDown(200);
-            });
-            $('.theme-login3').click(function(){
-                $('.theme-popover3-mask').fadeIn(100);
-                $('.theme-popover3').slideDown(200);
-            });
-            $('.theme-poptit1 .close').click(function(){
-                $('.theme-popover1-mask').fadeOut(100);
-                $('.theme-popover1').slideUp(200);
-            });
-            $('.theme-poptit2 .close').click(function(){
-                $('.theme-popover2-mask').fadeOut(100);
-                $('.theme-popover2').slideUp(200);
-            });
-            $('.theme-poptit3 .close').click(function(){
-                $('.theme-popover3-mask').fadeOut(100);
-                $('.theme-popover3').slideUp(200);
-            });
-        })
-    </script>
-    <script>
-        var account=[["admin","aaa"],["master","mmm"],["leader","lll"]];
-        function validate(f){
-            var flag=false;
-            var username=f.log.value;
-            var password=f.pwd.value;
-            for(var x=0;x<account.length;x++)
-                if(account[x][0]==username&&account[x][1]==password)
-                    flag=true;
-            if(!flag)
-                alert("用户名或密码不正确，请重新登录 !");
-            return flag;
-        }
-    </script>
 </head>
 <body>
 
@@ -128,8 +77,57 @@
             </tr>
         </table>
 
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- JS Scripts-->
+        <!-- jQuery Js -->
+        <script src="assets/js/jquery-1.10.2.js"></script>
+        <!-- Bootstrap Js -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Metis Menu Js -->
+        <script src="assets/js/jquery.metisMenu.js"></script>
 
-
+        <script>
+            jQuery(document).ready(function($) {
+                $('.theme-login1').click(function(){
+                    $('.theme-popover1-mask').fadeIn(100);
+                    $('.theme-popover1').slideDown(200);
+                });
+                $('.theme-login2').click(function(){
+                    $('.theme-popover2-mask').fadeIn(100);
+                    $('.theme-popover2').slideDown(200);
+                });
+                $('.theme-login3').click(function(){
+                    $('.theme-popover3-mask').fadeIn(100);
+                    $('.theme-popover3').slideDown(200);
+                });
+                $('.theme-poptit1 .close').click(function(){
+                    $('.theme-popover1-mask').fadeOut(100);
+                    $('.theme-popover1').slideUp(200);
+                });
+                $('.theme-poptit2 .close').click(function(){
+                    $('.theme-popover2-mask').fadeOut(100);
+                    $('.theme-popover2').slideUp(200);
+                });
+                $('.theme-poptit3 .close').click(function(){
+                    $('.theme-popover3-mask').fadeOut(100);
+                    $('.theme-popover3').slideUp(200);
+                });
+            })
+        </script>
+        <script>
+            var account=[["admin","aaa"],["master","mmm"],["leader","lll"]];
+            function validate(f){
+                var flag=false;
+                var username=f.log.value;
+                var password=f.pwd.value;
+                for(var x=0;x<account.length;x++)
+                    if(account[x][0]==username&&account[x][1]==password)
+                        flag=true;
+                if(!flag)
+                    alert("用户名或密码不正确，请重新登录 !");
+                return flag;
+            }
+        </script>
 
 </body>
 </html>
