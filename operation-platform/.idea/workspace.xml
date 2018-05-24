@@ -59,8 +59,8 @@
       <file leaf-file-name="tradeInfo.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/orgnizatioin/tradeInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="242" column="8" lean-forward="true" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="8" />
+            <state relative-caret-position="211">
+              <caret line="250" column="39" lean-forward="true" selection-start-line="250" selection-start-column="39" selection-end-line="250" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -171,45 +171,6 @@
               <item name="operation-platform" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="operation-platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="operation-platform" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="operation-platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="operation-platform" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="operation-platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="operation-platform" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="morris" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="operation-platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="operation-platform" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="operation-platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="operation-platform" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="orgnizatioin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="operation-platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="operation-platform" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -254,12 +215,12 @@
       <updated>1526985611178</updated>
       <workItem from="1526985613737" duration="2506000" />
       <workItem from="1526996471867" duration="1356000" />
-      <workItem from="1527047291638" duration="7522000" />
+      <workItem from="1527047291638" duration="9187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11384000" />
+    <option name="totallyTimeSpent" value="13049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -547,8 +508,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/orgnizatioin/tradeInfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="242" column="8" lean-forward="true" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="8" />
+        <state relative-caret-position="211">
+          <caret line="250" column="39" lean-forward="true" selection-start-line="250" selection-start-column="39" selection-end-line="250" selection-end-column="39" />
         </state>
       </provider>
     </entry>
