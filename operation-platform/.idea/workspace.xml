@@ -38,10 +38,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userIndex.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fileDownload.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/orgnizatioin/fileDownload.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="536">
+              <caret line="75" column="50" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userIndex.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/user/userIndex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
+            <state relative-caret-position="398">
               <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
             </state>
           </provider>
@@ -93,6 +102,7 @@
         <option value="$PROJECT_DIR$/app/user/userTradeCheck.html" />
         <option value="$PROJECT_DIR$/app/user/userInfo.html" />
         <option value="$PROJECT_DIR$/app/Test.html" />
+        <option value="$PROJECT_DIR$/app/orgnizatioin/fileDownload.html" />
       </list>
     </option>
   </component>
@@ -194,15 +204,16 @@
       <updated>1526985611178</updated>
       <workItem from="1526985613737" duration="2506000" />
       <workItem from="1526996471867" duration="1356000" />
-      <workItem from="1527047291638" duration="4469000" />
+      <workItem from="1527047291638" duration="4540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8331000" />
+    <option name="totallyTimeSpent" value="8402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -376,9 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/orgnizatioin/fileDownload.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/user/tradeCheck.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -439,8 +447,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/user/userIndex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
+        <state relative-caret-position="398">
           <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/orgnizatioin/fileDownload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="75" column="50" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
         </state>
       </provider>
     </entry>
