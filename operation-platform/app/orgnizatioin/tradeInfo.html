@@ -8,6 +8,8 @@
     <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FontAwesome Styles-->
     <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="../assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
     <!-- Custom Styles-->
     <link href="../assets/css/custom-styles.css" rel="stylesheet" />
     <!-- Google Fonts-->
@@ -193,6 +195,14 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            Donut Chart
+                                        </div>
+                                        <div class="panel-body">
+                                            <div id="myfirstchart"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -224,6 +234,34 @@
 </script>
 <!-- Custom Js -->
 <script src="../assets/js/custom-scripts.js"></script>
+
+<!-- Morris Chart Js -->
+<script src="../assets/js/morris/raphael-2.1.0.min.js"></script>
+<script src="../assets/js/morris/morris.js"></script>
+
+<!--此处编辑时序图-->
+<script>
+    new Morris.Line({
+        // ID of the element in which to draw the chart.
+        element: 'myfirstchart',
+        // Chart data records -- each entry in this array corresponds to a point on
+        // the chart.
+        data: [
+            { year: '2008', value: 20 },
+            { year: '2009', value: 10 },
+            { year: '2010', value: 5 },
+            { year: '2011', value: 5 },
+            { year: '2012', value: 20 }
+        ],
+        // The name of the data record attribute that contains x-values.
+        xkey: 'year',
+        // A list of names of data record attributes that contain y-values.
+        ykeys: ['value'],
+        // Labels for the ykeys -- will be displayed when you hover over the
+        // chart.
+        labels: ['Value']
+    });
+</script>
 
 
 </body>
