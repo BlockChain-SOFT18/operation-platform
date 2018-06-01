@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="../css/app.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/Pop-up Windows.css" type="text/css" media="all">
+</head>
+<body>
+
+<table style="height: 100%;width: 100%">
+    <tr>
+        <div>
+            <td align="center" valign="middle">
+                <div class="theme-buy">
+                    <button  class="btn btn-round color-1 material-design theme-login1" href="javascript:;" data-color="#ffffff">个人用户</button>
+                </div>
+                <div class="theme-popover1">
+                    <div class="theme-poptit1">
+                        <a href="javascript:" title="关闭" class="close">×</a>
+                        <h3>登录 是一种态度</h3>
+                    </div>
+                    <div class="theme-popbod dform">
+                        <!-- action is the JS file-->
+                        <form class="theme-signin" id="loginform_个人用户" name="loginform_个人用户" method="post" onsubmit="validate1()">
+                            <ol>
+                                <li><strong style="width: 100px;vertical-align: baseline">用户名：</strong> <input class="ipt" type="text" name="log" id="log1" size="24" /></li>
+                                <li><strong style="width: 100px;vertical-align: baseline">密码：</strong><input class="ipt" type="password" name="pwd" id="pwd1"size="24" /></li>
+                                <li><input class="btn btn-round color-1 material-design" type="submit" name="个人用户_submit" value=" 登 录 "/></li>
+                            </ol>
+                        </form>
+                    </div>
+                </div>
+            </td>
+
+            <td align="center" valign="middle">
+                <div class="theme-buy">
+                    <button  class="btn btn-round color-1 material-design theme-login2" href="javascript:;" data-color="#ffffff">机构</button>
+                </div>
+                <div class="theme-popover2">
+                    <div class="theme-poptit2">
+                        <a href="javascript:" title="关闭" class="close">×</a>
+                        <h3>登录 是一种态度</h3>
+                    </div>
+                    <div class="theme-popbod dform">
+                        <!-- action is the JS file-->
+                        <form class="theme-signin" id="loginform_机构" name="loginform_机构" method="post" onsubmit="validate2()">
+                            <ol>
+                                <li><strong style="width: 100px;vertical-align: baseline">用户名：</strong><input class="ipt" type="text" name="log" id="log2" size="24" /></li>
+                                <li><strong style="width: 100px;vertical-align: baseline">密码：</strong><input class="ipt" type="password" name="pwd" id="pwd2" size="24" /></li>
+                                <li><input class="btn btn-round color-1 material-design" type="submit" name="机构_submit" value=" 登 录 "/></li>
+                            </ol>
+                        </form>
+                    </div>
+                </div>
+            </td>
+
+        </div>
+    </tr>
+</table>
+
+<script src="../js/JSON-js-master/json2.js"></script>
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Js -->
+<script src="../js/jquery-1.10.2.js"></script>
+<!-- Bootstrap Js -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- Metis Menu Js -->
+<script src="../js/jquery.metisMenu.js"></script>
+<!-- Login Js -->
+<script src="../js/login.js"></script>
+
+</body>
+</html>

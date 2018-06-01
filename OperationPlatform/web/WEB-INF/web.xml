@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>com.op.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserInfo</servlet-name>
+        <servlet-class>com.op.UserInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserInfo</servlet-name>
+        <url-pattern>/UserInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserTradeCheck</servlet-name>
+        <servlet-class>com.op.UserTradeCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserTradeCheck</servlet-name>
+        <url-pattern>/UserTradeCheck</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrgInfo</servlet-name>
+        <servlet-class>com.op.OrgInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrgInfo</servlet-name>
+        <url-pattern>/OrgInfo</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>HelloWorld</servlet-name>
+        <servlet-class>com.op.HelloWorld</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+
+</web-app>
