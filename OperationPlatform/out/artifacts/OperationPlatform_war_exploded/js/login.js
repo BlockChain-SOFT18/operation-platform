@@ -46,6 +46,7 @@ function validate1() {
         }
     });
 }
+
 function validate2() {
     var username=document.getElementById("log2").value;
     var password=document.getElementById("pwd2").value;
@@ -64,6 +65,12 @@ function validate2() {
                 exp.setTime(exp.getTime() + Days*24*60*60*1000);
                 document.cookie = "orgID" + "="+ escape (data) + "";expires="" + exp.toGMTString();
                 location.href ="./orgInfo.html";
+                location.href="./tradeCheck.html";
+                location.href="./fileDownload.html";
+                location.href="./manualCharge.html";
+                location.href="./poundage.html";
+                location.href="./tradeInfo.html";
+                location.href="./userManage.html";
                 window.location.href="./orgInfo.html"
             }
         },

@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $('#dataTables-example').dataTable();
 });
+
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
     $scope.Search=function () {

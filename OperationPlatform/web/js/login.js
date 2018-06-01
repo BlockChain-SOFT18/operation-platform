@@ -46,6 +46,7 @@ function validate1() {
         }
     });
 }
+
 function validate2() {
     var username=document.getElementById("log2").value;
     var password=document.getElementById("pwd2").value;

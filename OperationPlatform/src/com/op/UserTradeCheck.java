@@ -30,7 +30,7 @@ public class UserTradeCheck extends HttpServlet{
             JSONObject jsonObject=new JSONObject();
             jsonObject.put("OrderID",OrderID[i]);
             jsonObject.put("OrderTime",OrderTime[i]);
-            jsonObject.put("UserID",userID);
+            jsonObject.put("UserID",UserID[i]);
             jsonObject.put("TradeType",TradeType[i]);
             jsonObject.put("TradeMoney",TradeMoney[i]);
             json.put("Info",jsonObject);

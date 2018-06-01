@@ -16,7 +16,8 @@ public class TradeCheck extends HttpServlet{
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        getInfo();
+        String orgID=request.getParameter("orgID");
+        getInfo(orgID);
         response.setContentType("text/html;charset=UTF-8");
         String tradeType=request.getParameter("TradeType");
         String startDate=request.getParameter("StartDate");
@@ -43,7 +44,7 @@ public class TradeCheck extends HttpServlet{
         doGet(request,response);
     }
 
-    public void getInfo(){
+    public void getInfo(String orgID){
         OrderID=new String[2];
         OrderTime=new String[2];
         UserID=new String[2];
