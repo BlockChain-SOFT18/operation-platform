@@ -13,7 +13,8 @@ public class UserInfo extends HttpServlet{
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        getInfo();
+        String userID=request.getParameter("userID");
+        getInfo(userID);
         response.setContentType("text/xml;charset=UTF-8");
         PrintWriter out = response.getWriter();
         out.println("<Information> \n ");
@@ -30,7 +31,7 @@ public class UserInfo extends HttpServlet{
         doGet(request,response);
     }
 
-    public void getInfo(){
+    public void getInfo(String userID){
         ID="123456";
         UserName="DeadPool";
         TrueName="Wed";

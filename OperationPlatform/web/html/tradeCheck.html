@@ -29,9 +29,11 @@
 
     </nav>
     <!--/. NAV TOP  -->
+
     <nav class="navbar-default navbar-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav" id="main-menu">
+
                 <li>
                     <a href="#"><i class="fa fa-desktop"></i>机构信息<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -86,7 +88,7 @@
 
     </nav>
     <!-- /. NAV SIDE  -->
-    <div id="page-wrapper" >
+    <div id="page-wrapper" ng-app="myApp"  ng-controller="customersCtrl">
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
@@ -104,25 +106,11 @@
                                             <form role="form">
                                                 <div class="form-group">
                                                     <label>交易类型</label>
-                                                    <select class="form-control">
+                                                    <select class="form-control" id="TradeType">
                                                         <option>类型1</option>
                                                         <option>类型2</option>
                                                         <option>类型3</option>
                                                     </select>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label>交易状态</label>
-                                                    <select class="form-control">
-                                                        <option>状态1</option>
-                                                        <option>状态2</option>
-                                                        <option>状态3</option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label>用户ID</label>
-                                                    <input class="form-control">
                                                 </div>
                                             </form>
                                         </div>
@@ -133,28 +121,13 @@
                                                     <label>创建日期</label>
                                                     <div class="row">
                                                         <div class="col-lg-5">
-                                                            <input class="form-control">
+                                                            <input class="form-control" id="StartDate">
                                                         </div>
                                                         <div class="col-lg-2">
                                                             <label style="color: #8d8888">-----------------</label>
                                                         </div>
                                                         <div class="col-lg-5">
-                                                            <input class="form-control">
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <div class="form-group ">
-                                                    <label>交易金额</label>
-                                                    <div class="row">
-                                                        <div class="col-lg-5">
-                                                            <input class="form-control">
-                                                        </div>
-                                                        <div class="col-lg-2">
-                                                            <label style="color: #8d8888">-----------------</label>
-                                                        </div>
-                                                        <div class="col-lg-5">
-                                                            <input class="form-control">
+                                                            <input class="form-control" id="EndDate">
                                                         </div>
 
                                                     </div>
@@ -165,7 +138,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-7"></div>
                                                         <div class="col-lg-5">
-                                                            <button class="btn btn-default btn-group-justified" type="button"><i class="fa fa-search"></i>
+                                                            <button class="btn btn-default btn-group-justified" type="button" ng-click="Search()"><i class="fa fa-search"></i>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -198,51 +171,13 @@
                                         <th>交易金额（元）</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                    <tr class="odd gradeX">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 4.0</td>
-                                        <td>Win 95+</td>
-                                        <td class="center">4</td>
-                                        <td class="center">X</td>
+                                    <tr ng-repeat="x in Info">
+                                        <td>{{ x.OrderID }}</td>
+                                        <td>{{ x.OrderTime }}</td>
+                                        <td>{{ x.UserID }}</td>
+                                        <td>{{ x.TradeType }}</td>
+                                        <td>{{ x.TradeMoney }}</td>
                                     </tr>
-                                    <tr class="even gradeC">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 5.0</td>
-                                        <td>Win 95+</td>
-                                        <td class="center">5</td>
-                                        <td class="center">C</td>
-                                    </tr>
-                                    <tr class="odd gradeA">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 5.5</td>
-                                        <td>Win 95+</td>
-                                        <td class="center">5.5</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="even gradeA">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 6</td>
-                                        <td>Win 98+</td>
-                                        <td class="center">6</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="odd gradeA">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 7</td>
-                                        <td>Win XP SP2+</td>
-                                        <td class="center">7</td>
-                                        <td class="center">A</td>
-                                    </tr>
-                                    <tr class="even gradeA">
-                                        <td>Trident</td>
-                                        <td>AOL browser (AOL desktop)</td>
-                                        <td>Win XP</td>
-                                        <td class="center">6</td>
-                                        <td class="center">A</td>
-                                    </tr>
-
-                                    </tbody>
                                 </table>
                             </div>
 
@@ -268,13 +203,12 @@
 <!-- DATA TABLE SCRIPTS -->
 <script src="../js/dataTables/jquery.dataTables.js"></script>
 <script src="../js/dataTables/dataTables.bootstrap.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#dataTables-example').dataTable();
-    });
-</script>
+<!-- Angular Js -->
+<script src="../js/angular-1.7.0/angular.js"></script>
 <!-- Custom Js -->
 <script src="../js/custom-scripts.js"></script>
+<!-- Special Js -->
+<script src="../js/tradeCheck.js"></script>
 
 
 </body>

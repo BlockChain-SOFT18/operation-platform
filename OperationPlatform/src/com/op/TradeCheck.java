@@ -9,15 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class UserTradeCheck extends HttpServlet{
+public class TradeCheck extends HttpServlet{
 
     private String[] OrderID,OrderTime,UserID,TradeType,TradeMoney;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        String userID=request.getParameter("userID");
-        getInfo(userID);
+        getInfo();
         response.setContentType("text/html;charset=UTF-8");
         String tradeType=request.getParameter("TradeType");
         String startDate=request.getParameter("StartDate");
@@ -30,7 +29,7 @@ public class UserTradeCheck extends HttpServlet{
             JSONObject jsonObject=new JSONObject();
             jsonObject.put("OrderID",OrderID[i]);
             jsonObject.put("OrderTime",OrderTime[i]);
-            jsonObject.put("UserID",userID);
+            jsonObject.put("UserID",UserID[i]);
             jsonObject.put("TradeType",TradeType[i]);
             jsonObject.put("TradeMoney",TradeMoney[i]);
             json.put("Info",jsonObject);
@@ -44,14 +43,14 @@ public class UserTradeCheck extends HttpServlet{
         doGet(request,response);
     }
 
-    public void getInfo(String userID){
+    public void getInfo(){
         OrderID=new String[2];
         OrderTime=new String[2];
         UserID=new String[2];
         TradeType=new String[2];
         TradeMoney=new String[2];
 
-        OrderID[0]="123456";
+        OrderID[0]="654321";
         OrderTime[0]="2018/4/1 23:59:59";
         UserID[0]="233333";
         TradeType[0]="转账";

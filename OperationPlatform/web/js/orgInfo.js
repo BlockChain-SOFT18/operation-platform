@@ -4,6 +4,7 @@ function loadXMLDoc()
     if (window.XMLHttpRequest)
         xmlhttp=new XMLHttpRequest();
     else xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    var arr = document.cookie.match(new RegExp("(^| )"+"userID"+"=([^;]*)(;|$)"));
     xmlhttp.onreadystatechange=function()
     {
         if (xmlhttp.readyState==4 && xmlhttp.status==200)
@@ -19,5 +20,7 @@ function loadXMLDoc()
         }
     }
     xmlhttp.open("POST","http://localhost:8080/OP/OrgInfo",true);
-    xmlhttp.send();
+    xmlhttp.setRequestHeader("Content-Type"
+        , "application/x-www-form-urlencoded");
+    xmlhttp.send("orgID="+unescape(arr[2]));
 }

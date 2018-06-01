@@ -4,15 +4,11 @@ $(document).ready(function () {
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
     $scope.Search=function () {
+        var arr = document.cookie.match(new RegExp("(^| )"+"userID"+"=([^;]*)(;|$)"));
         var tradeType=document.getElementById("TradeType").value;
-        var tradeState=document.getElementById("TradeState").value;
-        var userID=document.getElementById("UserID").value;
         var startDate=document.getElementById("StartDate").value;
         var endDate=document.getElementById("EndDate").value;
-        var minMoney=document.getElementById("MinMoney").value;
-        var maxMoney=document.getElementById("MaxMoney").value;
-        var postData=$.param({TradeType:tradeType,TradeState:tradeState,UserID:userID,StartDate:startDate,
-            EndDate:endDate,MinMoney:minMoney,MaxMoney:maxMoney});
+        var postData=$.param({userID:arr[2],TradeType:tradeType,StartDate:startDate, EndDate:endDate});
         $http({
             method:"POST",
             url:"http://localhost:8080/OP/UserTradeCheck",

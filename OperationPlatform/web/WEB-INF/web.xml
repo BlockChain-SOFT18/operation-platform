@@ -40,6 +40,14 @@
         <url-pattern>/OrgInfo</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>TradeCheck</servlet-name>
+        <servlet-class>com.op.TradeCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TradeCheck</servlet-name>
+        <url-pattern>/TradeCheck</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>HelloWorld</servlet-name>

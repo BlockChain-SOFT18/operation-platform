@@ -13,7 +13,8 @@ public class OrgInfo extends HttpServlet{
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        getInfo();
+        String orgID=request.getParameter("orgID");
+        getInfo(orgID);
         response.setContentType("text/xml;charset=UTF-8");
         PrintWriter out = response.getWriter();
         out.println("<Information> \n ");
@@ -32,7 +33,7 @@ public class OrgInfo extends HttpServlet{
         doGet(request,response);
     }
 
-    public void getInfo(){
+    public void getInfo(String orgID){
         ID="123456";
         OrgName1="北京航空航天大学";
         OrgName2="北京航空航天大学";

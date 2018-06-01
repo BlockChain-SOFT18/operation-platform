@@ -26,10 +26,18 @@ function validate1() {
         dataType: "html",
         data:{UserName:username,Password:password,Type:1},
         success: function (data) {
-            var flag=data=="true";
+            var flag=data!="false";
             if (!flag)
                 alert("用户名或密码不正确，请重新登录 !");
-            else window.location.href="./userInfo.html"
+            else {
+                var Days = 30;
+                var exp　= new Date();
+                exp.setTime(exp.getTime() + Days*24*60*60*1000);
+                document.cookie = "userID" + "="+ escape (data) + "";expires="" + exp.toGMTString();
+                location.href ="./userInfo.html";
+                location.href="./userTradeCheck.html"
+                window.location.href="./userInfo.html"
+            }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown,data) {
             alert(XMLHttpRequest.status);
@@ -47,10 +55,17 @@ function validate2() {
         dataType: "html",
         data:{UserName:username,Password:password,Type:2},
         success: function (data) {
-            var flag=data=="true";
+            var flag=data!="false";
             if (!flag)
                 alert("用户名或密码不正确，请重新登录 !");
-            else window.location.href="./orgInfo.html"
+            else {
+                var Days = 30;
+                var exp　= new Date();
+                exp.setTime(exp.getTime() + Days*24*60*60*1000);
+                document.cookie = "orgID" + "="+ escape (data) + "";expires="" + exp.toGMTString();
+                location.href ="./orgInfo.html";
+                window.location.href="./orgInfo.html"
+            }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown,data) {
             alert(XMLHttpRequest.status);
