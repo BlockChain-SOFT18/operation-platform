@@ -18,11 +18,11 @@ public class ManualCharge extends HttpServlet{
     {
         String orgID=request.getParameter("orgID");
         String att=request.getParameter("att");
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        JSONObject json=new JSONObject();
         if(att.equals("Search"))
         {
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            JSONObject json=new JSONObject();
             String tradeType=request.getParameter("TradeType");
             String userID=request.getParameter("UserID");
             String startDate=request.getParameter("StartDate");
@@ -39,19 +39,15 @@ public class ManualCharge extends HttpServlet{
                 jsonObject.put("TradeState",TradeState[i]);
                 json.put("Info",jsonObject);
             }
-            out.println(json);
         }
         else if(att.equals("Adjust"))
         {
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            JSONObject json=new JSONObject();
             String money=request.getParameter("Money");
             String changeID=request.getParameter("ChangeID");
             adjust(orgID,changeID,money);
             json.put("Info",changeID+" adjust "+money);
-            out.println(json);
         }
+        out.println(json);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)

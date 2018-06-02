@@ -18,11 +18,11 @@ public class UserManage extends HttpServlet{
     {
         String orgID=request.getParameter("orgID");
         String att=request.getParameter("att");
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        JSONObject json=new JSONObject();
         if(att.equals("List"))
         {
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            JSONObject json=new JSONObject();
             getInfo(orgID);
             for(int i=0;i<UserID.length;i++)
             {
@@ -32,13 +32,9 @@ public class UserManage extends HttpServlet{
                 jsonObject.put("State",State[i]);
                 json.put("Info",jsonObject);
             }
-            out.println(json);
         }
         else if(att.equals("Search"))
         {
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            JSONObject json=new JSONObject();
             String userID=request.getParameter("UserID");
             String userName=request.getParameter("UserName");
             String state=request.getParameter("State");
@@ -51,28 +47,20 @@ public class UserManage extends HttpServlet{
                 jsonObject.put("State",State[i]);
                 json.put("Info",jsonObject);
             }
-            out.println(json);
         }
         else if(att.equals("Freeze"))
         {
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            JSONObject json=new JSONObject();
             String changeID=request.getParameter("ChangeID");
             freeze(orgID,changeID);
             json.put("Info",changeID);
-            out.println(json);
         }
         else if(att.equals("Active"))
         {
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            JSONObject json=new JSONObject();
             String changeID=request.getParameter("ChangeID");
             active(orgID,changeID);
             json.put("Info",changeID);
-            out.println(json);
         }
+        out.println(json);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)

@@ -86,7 +86,7 @@
 
     </nav>
     <!-- /. NAV SIDE  -->
-    <div id="page-wrapper" >
+    <div id="page-wrapper" ng-app="myApp" ng-controller="customersCtrl">
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
@@ -103,7 +103,7 @@
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <label>对账文件类型</label>
-                                                    <select class="form-control">
+                                                    <select class="form-control" id="FileType">
                                                         <option>下游对账文件</option>
                                                     </select>
                                                 </div>
@@ -111,7 +111,7 @@
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <label>对账类型</label>
-                                                    <select class="form-control">
+                                                    <select class="form-control" id="AccountType">
                                                         <option>全部</option>
                                                     </select>
                                                 </div>
@@ -119,7 +119,7 @@
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <label>账期</label>
-                                                    <input class="form-control">
+                                                    <input class="form-control" id="AccountTime">
                                                 </div>
                                             </div>
                                         </div>
@@ -128,7 +128,7 @@
                                             <div class="col-lg-9"></div>
                                             <div class="col-lg-3">
                                                 <div class="form-group">
-                                                    <button class="btn btn-default btn-group-justified" type="button"><i class="fa fa-search"></i>
+                                                    <button class="btn btn-default btn-group-justified" type="button" ng-click="Search()"><i class="fa fa-search"></i>
                                                     </button>
                                                 </div>
                                             </div>
@@ -147,7 +147,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <table class="table table-striped table-bordered table-hover">
                                     <thead>
                                     <tr>
                                         <th>序号</th>
@@ -155,26 +155,21 @@
                                         <th>操作</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                    <tr class="odd gradeX">
-                                        <td>1</td>
-                                        <td>Internet Explorer 4.0</td>
+                                    <tr ng-repeat="x in Info">
+                                        <td>{{ x.No }}</td>
+                                        <td>{{ x.FileName }}</td>
                                         <td>
                                             <div class="form-group">
                                                 <div class="row">
-                                                    <div class="col-lg-6"></div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <button class="btn btn-default">下载</button>
+                                                            <button class="btn btn-default" ng-model="x.Address" ng-click="Download($index)">下载</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
-
-
-                                    </tbody>
                                 </table>
                             </div>
 
@@ -201,13 +196,12 @@
 <!-- DATA TABLE SCRIPTS -->
 <script src="../js/dataTables/jquery.dataTables.js"></script>
 <script src="../js/dataTables/dataTables.bootstrap.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#dataTables-example').dataTable();
-    });
-</script>
+<!-- Angular Js -->
+<script src="../js/angular-1.7.0/angular.js"></script>
 <!-- Custom Js -->
 <script src="../js/custom-scripts.js"></script>
+<!-- Special Js -->
+<script src="../js/fileDownload.js"></script>
 
 
 </body>
