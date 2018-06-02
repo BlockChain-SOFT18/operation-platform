@@ -6,9 +6,6 @@
         <element id="directory" name="classes">
           <element id="module-output" name="OperationPlatform" />
         </element>
-        <element id="directory" name="lib">
-          <element id="library" level="project" name="Spring-4.3.16.RELEASE" />
-        </element>
       </element>
       <element id="javaee-facet-resources" facet="OperationPlatform/web/Web" />
     </root>
