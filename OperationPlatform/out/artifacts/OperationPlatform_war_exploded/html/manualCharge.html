@@ -87,7 +87,7 @@
 
     </nav>
     <!-- /. NAV SIDE  -->
-    <div id="page-wrapper" ng-app="myApp"  ng-controller="customersCtrl">
+    <div id="page-wrapper" ng-app="myApp" ng-controller="customersCtrl" data-ng-init="Init()">
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
@@ -190,7 +190,7 @@
                                                         <div class="form-group">
                                                             <div class="row">
                                                                 <div class="col-lg-8">
-                                                                    <input class="form-control" ng-model="Info.money">
+                                                                    <input type="text" class="form-control" ng-model="x.Money">
                                                                 </div>
                                                                 <div class="col-lg-4">
                                                                     <button class="btn btn-default btn-group-justified btn-warning" ng-click="Adjust($index)">调账</button>
