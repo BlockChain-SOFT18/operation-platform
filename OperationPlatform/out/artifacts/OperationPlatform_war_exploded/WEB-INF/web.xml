@@ -59,6 +59,24 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>UserManage</servlet-name>
+        <servlet-class>com.op.UserManage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserManage</servlet-name>
+        <url-pattern>/UserManage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ManualCharge</servlet-name>
+        <servlet-class>com.op.ManualCharge</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManualCharge</servlet-name>
+        <url-pattern>/ManualCharge</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>HelloWorld</servlet-name>
         <servlet-class>com.op.HelloWorld</servlet-class>
     </servlet>

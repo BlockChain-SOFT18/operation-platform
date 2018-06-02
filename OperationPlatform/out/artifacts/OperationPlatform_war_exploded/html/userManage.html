@@ -13,7 +13,7 @@
     <!-- Google Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
-<body>
+<body ng-app="myApp">
 <div id="wrapper">
     <nav class="navbar navbar-default top-navbar" role="navigation">
         <div class="navbar-header">
@@ -86,7 +86,7 @@
 
     </nav>
     <!-- /. NAV SIDE  -->
-    <div id="page-wrapper" >
+    <div id="page-wrapper" ng-controller="customersCtrl" data-ng-init="List()">
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
@@ -106,20 +106,20 @@
                                                     <div class="col-lg-4">
                                                         <div class="form-group">
                                                                 <label>用户ID</label>
-                                                                <input class="form-control">
+                                                                <input class="form-control" id="UserID">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-4">
                                                         <div class="form-group">
                                                             <label>姓名</label>
-                                                            <input class="form-control">
+                                                            <input class="form-control" id="UserName">
                                                         </div>
                                                     </div>
 
                                                     <div class="col-lg-4">
                                                         <div class="form-group">
                                                             <label>账户状态</label>
-                                                            <select class="form-control">
+                                                            <select class="form-control" id="State">
                                                                 <option>状态1</option>
                                                                 <option>状态2</option>
                                                                 <option>状态3</option>
@@ -137,8 +137,7 @@
                                         <div class="col-lg-8"></div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <button class="btn btn-default btn-group-justified" type="button"><i class="fa fa-search"></i>
-                                                </button>
+                                                <button class="btn btn-default btn-group-justified" type="button" ng-click="Search()"><i class="fa fa-search"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -162,31 +161,27 @@
                                             <tr>
                                                 <th>用户id</th>
                                                 <th>姓名</th>
-                                                <th>用户当前权限</th>
                                                 <th>用户状态</th>
                                                 <th>操作</th>
                                             </tr>
                                             </thead>
-                                            <tbody>
-                                            <tr class="odd gradeX">
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 4.0</td>
-                                                <td>Win 95+</td>
-                                                <td class="center">4</td>
+                                            <tr ng-repeat="x in Info">
+                                                <td>{{ x.UserID }}</td>
+                                                <td>{{ x.UserName }}</td>
+                                                <td>{{ x.State }}</td>
                                                 <td>
                                                     <form role="form">
                                                         <div class="row">
                                                             <div class="col-lg-6">
-                                                                <button class="btn btn-default btn-group-justified btn-warning">冻结</button>
+                                                                <button class="btn btn-default btn-group-justified btn-warning" ng-click="Freeze($index)">冻结</button>
                                                             </div>
                                                             <div class="col-lg-6">
-                                                                <button class="btn btn-default btn-group-justified btn-danger">销户</button>
+                                                                <button class="btn btn-default btn-group-justified btn-danger"  ng-click="Active($index)">激活</button>
                                                             </div>
                                                         </div>
                                                     </form>
                                                 </td>
                                             </tr>
-                                            </tbody>
                                         </table>
                                     </div>
 
@@ -214,14 +209,12 @@
 <!-- DATA TABLE SCRIPTS -->
 <script src="../js/dataTables/jquery.dataTables.js"></script>
 <script src="../js/dataTables/dataTables.bootstrap.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#dataTables-example').dataTable();
-    });
-</script>
-
+<!-- Angular Js -->
+<script src="../js/angular-1.7.0/angular.js"></script>
 <!-- Custom Js -->
 <script src="../js/custom-scripts.js"></script>
+<!-- Special Js -->
+<script src="../js/userManage.js"></script>
 
 
 </body>

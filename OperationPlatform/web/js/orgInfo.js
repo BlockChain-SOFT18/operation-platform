@@ -18,7 +18,7 @@ function loadXMLDoc()
             document.getElementById("PersonName").innerHTML=info[4].firstChild.nodeValue;
             document.getElementById("PhoneNumber").innerHTML=info[5].firstChild.nodeValue;
         }
-    }
+    };
     xmlhttp.open("POST","http://localhost:8080/OP/OrgInfo",true);
     xmlhttp.setRequestHeader("Content-Type"
         , "application/x-www-form-urlencoded");

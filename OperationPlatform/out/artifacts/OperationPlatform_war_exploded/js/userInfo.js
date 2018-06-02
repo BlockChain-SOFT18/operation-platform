@@ -16,7 +16,7 @@ function loadXMLDoc()
             document.getElementById("TrueName").innerHTML=info[2].firstChild.nodeValue;
             document.getElementById("State").innerHTML=info[3].firstChild.nodeValue;
         }
-    }
+    };
     xmlhttp.open("POST","http://localhost:8080/OP/UserInfo",true);
     xmlhttp.setRequestHeader("Content-Type"
         , "application/x-www-form-urlencoded");

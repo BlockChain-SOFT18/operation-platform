@@ -35,8 +35,8 @@ function validate1() {
                 exp.setTime(exp.getTime() + Days*24*60*60*1000);
                 document.cookie = "userID" + "="+ escape (data) + "";expires="" + exp.toGMTString();
                 location.href ="./userInfo.html";
-                location.href="./userTradeCheck.html"
-                window.location.href="./userInfo.html"
+                location.href="./userTradeCheck.html";
+                window.location.href="./userInfo.html";
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown,data) {
@@ -71,7 +71,7 @@ function validate2() {
                 location.href="./poundage.html";
                 location.href="./tradeInfo.html";
                 location.href="./userManage.html";
-                window.location.href="./orgInfo.html"
+                window.location.href="./orgInfo.html";
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown,data) {
