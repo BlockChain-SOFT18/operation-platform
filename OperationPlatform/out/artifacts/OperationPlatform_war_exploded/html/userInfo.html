@@ -10,6 +10,8 @@
     <link href="../css/font-awesome.css" rel="stylesheet" />
     <!-- Custom Styles-->
     <link href="../css/custom-styles.css" rel="stylesheet" />
+    <!-- Pop-up Windows -->
+    <link rel="stylesheet" href="../css/Pop-up Windows.css" type="text/css" media="all">
     <!-- Google Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -106,10 +108,10 @@
                                                     可使用
                                                 </div>
                                                 <div class="col-lg-2">
-                                                    <button class="btn btn-default btn-danger">冻结</button>
+                                                    <button class="btn btn-default btn-danger" onclick="Freeze()">冻结</button>
                                                 </div>
                                                 <div class="col-lg-2">
-                                                    <button class="btn btn-default btn-success">激活</button>
+                                                    <button class="btn btn-default btn-success" onclick="Active()">激活</button>
                                                 </div>
                                             </div>
 
@@ -119,7 +121,22 @@
                                     <tr>
                                         <td>密码</td>
                                         <td>
-                                            <button class="btn btn-default btn-warning">修改密码</button>
+                                            <button  class="btn btn-round color-1 material-design theme-login1" href="javascript:;" data-color="#ffffff">修改密码</button>
+                                            <div class="theme-popover1">
+                                                <div class="theme-poptit1">
+                                                    <a href="javascript:" title="关闭" class="close">×</a>
+                                                    <h3>修改密码</h3>
+                                                </div>
+                                                <div class="theme-popbod dform">
+                                                    <form class="theme-signin" id="ChangePwd" method="post" onsubmit="ChangePwd()">
+                                                        <ol>
+                                                            <li><strong style="width: 100px;vertical-align: baseline">原密码：</strong> <input class="ipt" type="password" id="pwd1" size="24" /></li>
+                                                            <li><strong style="width: 100px;vertical-align: baseline">新密码：</strong><input class="ipt" type="password" id="pwd2"size="24" /></li>
+                                                            <li><input class="btn btn-round color-1 material-design" type="submit" value=" 修 改 "/></li>
+                                                        </ol>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
 
@@ -145,10 +162,11 @@
 <script src="../js/bootstrap.min.js"></script>
 <!-- Metis Menu Js -->
 <script src="../js/jquery.metisMenu.js"></script>
-<!-- Custom Js -->
-<script src="../js/custom-scripts.js"></script>
 <!-- Special Js-->
 <script src="../js/userInfo.js"></script>
+<!-- Custom Js -->
+<script src="../js/custom-scripts.js"></script>
+
 
 
 </body>

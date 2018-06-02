@@ -13,15 +13,29 @@ public class UserInfo extends HttpServlet{
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        String userID=request.getParameter("userID");
-        getInfo(userID);
         response.setContentType("text/xml;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        String userID=request.getParameter("userID");
+        String msg=request.getParameter("msg");
         out.println("<Information> \n ");
-        out.println("<Info> \n "+ ID +" \n </Info> \n");
-        out.println("<Info> \n "+ UserName +" \n </Info> \n");
-        out.println("<Info> \n "+ TrueName +" \n </Info> \n");
-        out.println("<Info> \n "+ State +" \n </Info> \n");
+        if(msg.equals("Freeze"))
+            out.println("<Info> \n "+ freeze(userID) +" \n </Info> \n");
+        else if(msg.equals("Active"))
+            out.println("<Info> \n "+ active(userID) +" \n </Info> \n");
+        else if(msg.equals("ChangePwd"))
+        {
+            String pwd1=request.getParameter("pwd1");
+            String pwd2=request.getParameter("pwd2");
+            out.println("<Info> \n "+ changePwd(pwd1,pwd2) +" \n </Info> \n");
+        }
+        else if(msg.equals("Load"))
+        {
+            getInfo(userID);
+            out.println("<Info> \n "+ ID +" \n </Info> \n");
+            out.println("<Info> \n "+ UserName +" \n </Info> \n");
+            out.println("<Info> \n "+ TrueName +" \n </Info> \n");
+            out.println("<Info> \n "+ State +" \n </Info> \n");
+        }
         out.println("</Information>");
     }
 
@@ -37,4 +51,17 @@ public class UserInfo extends HttpServlet{
         TrueName="Wed";
         State="可使用";
     }
+
+    public String freeze(String userID){
+        return "true";
+    }
+
+    public String active(String userID){
+        return "true";
+    }
+
+    public String changePwd(String pwd1,String pwd2){
+        return "true";
+    }
+
 }
