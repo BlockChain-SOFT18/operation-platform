@@ -22,5 +22,5 @@ function loadXMLDoc()
     xmlhttp.open("POST","http://localhost:8080/OP/OrgInfo",true);
     xmlhttp.setRequestHeader("Content-Type"
         , "application/x-www-form-urlencoded");
-    xmlhttp.send("orgID="+unescape(arr[2]));
+    xmlhttp.send("orgID="+arr[2]);
 }

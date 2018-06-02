@@ -20,5 +20,5 @@ function loadXMLDoc()
     xmlhttp.open("POST","http://localhost:8080/OP/UserInfo",true);
     xmlhttp.setRequestHeader("Content-Type"
         , "application/x-www-form-urlencoded");
-    xmlhttp.send("userID="+unescape(arr[2]));
+    xmlhttp.send("userID="+arr[2]);
 }

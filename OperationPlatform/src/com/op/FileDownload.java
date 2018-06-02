@@ -26,7 +26,7 @@ public class FileDownload extends HttpServlet{
         for (int i = 0; i < FileName.length; i++)
         {
             JSONObject jsonObject = new JSONObject();
-            jsonObject.put("No", i);
+            jsonObject.put("No", i+1);
             jsonObject.put("FileName", FileName[i]);
             jsonObject.put("Address", Address[i]);
             json.put("Info", jsonObject);

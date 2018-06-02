@@ -7,6 +7,10 @@ app.controller('customersCtrl', function($scope, $http) {
         "Address":""
     }];
 
+    $scope.Init=function () {
+        $scope.Info=null;
+    };
+
     $scope.Search=function () {
         var arr = document.cookie.match(new RegExp("(^| )"+"orgID"+"=([^;]*)(;|$)"));
         var fileType=document.getElementById("FileType").value;
