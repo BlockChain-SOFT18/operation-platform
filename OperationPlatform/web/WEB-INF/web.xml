@@ -7,6 +7,7 @@
     <servlet>
         <servlet-name>Login</servlet-name>
         <servlet-class>com.op.Login</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -16,6 +17,7 @@
     <servlet>
         <servlet-name>UserInfo</servlet-name>
         <servlet-class>com.op.UserInfo</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserInfo</servlet-name>
@@ -25,6 +27,7 @@
     <servlet>
         <servlet-name>UserTradeCheck</servlet-name>
         <servlet-class>com.op.UserTradeCheck</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserTradeCheck</servlet-name>
@@ -34,6 +37,7 @@
     <servlet>
         <servlet-name>OrgInfo</servlet-name>
         <servlet-class>com.op.OrgInfo</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>OrgInfo</servlet-name>
@@ -43,6 +47,7 @@
     <servlet>
         <servlet-name>TradeCheck</servlet-name>
         <servlet-class>com.op.TradeCheck</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>TradeCheck</servlet-name>
@@ -52,6 +57,7 @@
     <servlet>
         <servlet-name>TradeInfo</servlet-name>
         <servlet-class>com.op.TradeInfo</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>TradeInfo</servlet-name>
@@ -61,6 +67,7 @@
     <servlet>
         <servlet-name>UserManage</servlet-name>
         <servlet-class>com.op.UserManage</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserManage</servlet-name>
@@ -70,6 +77,7 @@
     <servlet>
         <servlet-name>ManualCharge</servlet-name>
         <servlet-class>com.op.ManualCharge</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>ManualCharge</servlet-name>
@@ -79,6 +87,7 @@
     <servlet>
         <servlet-name>Poundage</servlet-name>
         <servlet-class>com.op.Poundage</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>Poundage</servlet-name>
@@ -88,6 +97,7 @@
     <servlet>
         <servlet-name>FileDownload</servlet-name>
         <servlet-class>com.op.FileDownload</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>FileDownload</servlet-name>

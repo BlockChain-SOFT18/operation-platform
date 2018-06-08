@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Vendor: The Dubbo Project
+Implementation-Title: dubbo-all
+Implementation-Version: 2.6.1
+Implementation-Vendor-Id: com.alibaba
+Built-By: ken.lj
+Build-Jdk: 1.7.0_80
+Specification-Vendor: The Dubbo Project
+Specification-Title: dubbo-all
+Created-By: Apache Maven 3.3.9
+Implementation-URL: http://dubbo.io/dubbo
+Specification-Version: 2.6
+

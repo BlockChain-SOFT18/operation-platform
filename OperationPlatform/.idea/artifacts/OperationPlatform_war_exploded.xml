@@ -5,6 +5,8 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="OperationPlatform" />
+          <element id="extracted-dir" path="$USER_HOME$/.m2/repository/com/alibaba/dubbo/2.6.1/dubbo-2.6.1.jar" path-in-jar="/" />
+          <element id="extracted-dir" path="E:/BlockChain-api.jar" path-in-jar="/" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="OperationPlatform/web/Web" />
