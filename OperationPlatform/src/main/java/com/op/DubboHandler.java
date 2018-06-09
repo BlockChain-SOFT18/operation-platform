@@ -14,16 +14,11 @@ public class DubboHandler {
     public AccountService accountService;
     public CSSystem csSystem;
     private DubboHandler(){
-        try {
-            ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-            accountService = (AccountService) context.getBean(AccountService.class);
-            accountService=new AccountServiceWrapper(accountService);
-            csSystem = (CSSystem) context.getBean(CSSystem.class);
-            csSystem=new CSSystemWrapper(csSystem);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        //context.start();
-
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        accountService = (AccountService) context.getBean(AccountService.class);
+        accountService=new AccountServiceWrapper(accountService);
+        csSystem = (CSSystem) context.getBean(CSSystem.class);
+        csSystem=new CSSystemWrapper(csSystem);
+        context.start();
     }
 }

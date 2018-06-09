@@ -1,6 +1,8 @@
 package com.op;
 
 import buaa.jj.accountservice.api.AccountService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.*;
 import javax.servlet.ServletException;
@@ -10,26 +12,28 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Login extends HttpServlet {
 
-    /*@Override
+    @Override
     public void init() throws ServletException {
         super.init();
         DubboHandler.init();
-    }*/
+    }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        String responseText=null;
+        response.setContentType("text/xml;charset=UTF-8");
+        PrintWriter out = response.getWriter();
         String username=request.getParameter("UserName");
         String password=request.getParameter("Password");
         String type=request.getParameter("Type");
-        if(type.equals("1")&&DubboHandler.INSTANCE.accountService.userLogin(username,password)>0)
-            responseText=String.valueOf(DubboHandler.INSTANCE.accountService.userLogin(username,password));
-        else if(type.equals("2")&&succeed2(username,password)>0)
-            responseText=String.valueOf(succeed2(username,password));
-        else responseText="false";
-        response.getWriter().print(responseText);
-        response.getWriter().close();
+        out.println("<Information> \n ");
+        int num = DubboHandler.INSTANCE.accountService.userLogin(username, password);
+        System.out.println(num);
+        if(type.equals("1")&&num>0)
+            out.println("<Info> \n "+ String.valueOf(num) +" \n </Info> \n");
+        else if(type.equals("2")&&num>0)
+            out.println("<Info> \n "+ String.valueOf(num) +" \n </Info> \n");
+        else out.println("<Info> \n "+ "false" +" \n </Info> \n");
+        out.println("</Information>");
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)

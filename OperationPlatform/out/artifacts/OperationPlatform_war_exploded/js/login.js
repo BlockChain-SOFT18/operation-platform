@@ -23,10 +23,12 @@ function validate1() {
     $.ajax({
         type:"POST",
         url:"http://localhost:8080/OP/Login",
-        dataType: "html",
+        dataType: "xml",
         data:{UserName:username,Password:password,Type:1},
         success: function (data) {
-            var flag=data!="false";
+            alert(data);
+            var info=data.getElementsByTagName("Info");
+            /*var flag=((info[0].firstChild.nodeValue)!="false");
             if (!flag)
                 alert("用户名或密码不正确，请重新登录 !");
             else {
@@ -37,11 +39,11 @@ function validate1() {
                 location.href ="./userInfo.html";
                 location.href="./userTradeCheck.html";
                 window.location.href="./userInfo.html";
-            }
+            }*/
         },
         error: function(XMLHttpRequest, textStatus, errorThrown,data) {
-            alert(XMLHttpRequest.status);
             alert(XMLHttpRequest.readyState);
+            alert(XMLHttpRequest.status);
             alert(textStatus);
         }
     });
@@ -53,10 +55,11 @@ function validate2() {
     $.ajax({
         type:"POST",
         url:"http://localhost:8080/OP/Login",
-        dataType: "html",
+        dataType: "xml",
         data:{UserName:username,Password:password,Type:2},
         success: function (data) {
-            var flag=data!="false";
+            var info=data.getElementsByTagName("Info");
+            var flag=((info[0].firstChild.nodeValue)!="false");
             if (!flag)
                 alert("用户名或密码不正确，请重新登录 !");
             else {
@@ -75,8 +78,8 @@ function validate2() {
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown,data) {
-            alert(XMLHttpRequest.status);
             alert(XMLHttpRequest.readyState);
+            alert(XMLHttpRequest.status);
             alert(textStatus);
         }
     });

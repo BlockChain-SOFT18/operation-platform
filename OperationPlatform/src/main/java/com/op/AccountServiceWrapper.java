@@ -14,9 +14,12 @@ public class AccountServiceWrapper implements AccountService{
     }
 
     public int userLogin(String user_name, String user_passwd) throws UserNotExistException, UserFrozenException {
+        if(accountService==null)
+            System.out.println("null!");
+        else System.out.println("not null!");
         if(accountService!=null)
-            return accountService.userLogin(user_name, user_passwd);
-        return -1;
+            return accountService.userLogin(user_name,user_passwd);
+        else return -1;
     }
 
     public int agencyLogin(String agency_name, String agency_passwd) {
@@ -44,7 +47,8 @@ public class AccountServiceWrapper implements AccountService{
     }
 
     public Map userInformation(int user_id) {
-        if(accountService!=null)return accountService.userInformation(user_id);
+        if(accountService!=null)
+            return accountService.userInformation(user_id);
         Map p=new HashMap();
         p.put("userRealName","YZL");
         return p;

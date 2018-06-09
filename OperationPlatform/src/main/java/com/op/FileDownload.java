@@ -1,8 +1,9 @@
 package com.op;
 
+import buaa.jj.accountservice.api.AccountService;
 import com.altale.service.CSSystem;
 import net.sf.json.JSONObject;
-import org.apache.catalina.core.ApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.*;
@@ -16,12 +17,6 @@ public class FileDownload extends HttpServlet{
 
     private String[] FileName,Address;
 
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        DubboHandler.init();
-    }
-
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String orgID = request.getParameter("orgID");
@@ -30,7 +25,9 @@ public class FileDownload extends HttpServlet{
         String fileType = request.getParameter("FileType");
         String accountType = request.getParameter("AccountType");
         String accountTime = request.getParameter("AccountTime");
+
         String s=DubboHandler.INSTANCE.csSystem.DownloadFile(accountTime);
+        System.out.println(s);
         JSONObject json = new JSONObject();
         searchInfo(orgID, fileType, accountType, accountTime);
         for (int i = 0; i < FileName.length; i++)

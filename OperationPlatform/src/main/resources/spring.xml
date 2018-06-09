@@ -4,7 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
 
     <!-- **************************** 导入其他XML文件 **************************** -->
-    <import resource="AccountService-consumer.xml"/>
-    <import resource="CSSystem-consumer.xml"/>
+    <import resource="OperationPlatform-consumer.xml"/>
     <!-- **************************** /导入其他XML文件 **************************** -->
 </beans>

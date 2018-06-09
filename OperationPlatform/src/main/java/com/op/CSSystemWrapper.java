@@ -14,7 +14,7 @@ public class CSSystemWrapper implements CSSystem{
     }
 
     public String Recharge(String var1, String var2, double var3, boolean var5, String var6) throws RequestException{
-        return "233";
+        return "2333";
     }
 
     public String Withdraw(String var1, String var2, double var3, boolean var5, String var6) throws RequestException{
