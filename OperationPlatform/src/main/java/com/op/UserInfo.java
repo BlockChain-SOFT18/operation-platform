@@ -1,5 +1,7 @@
 package com.op;
 
+import org.apache.catalina.User;
+
 import java.io.*;
 import java.util.Map;
 import javax.servlet.ServletException;
@@ -9,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class UserInfo extends HttpServlet{
 
-    private String ID,UserName,TrueName,State;
+    private String State;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
@@ -18,23 +20,33 @@ public class UserInfo extends HttpServlet{
         PrintWriter out = response.getWriter();
         String userID=request.getParameter("userID");
         String msg=request.getParameter("msg");
+        int id=Integer.valueOf(userID).intValue();
+
         out.println("<Information> \n ");
         if(msg.equals("Freeze"))
-            out.println("<Info> \n "+ freeze(userID) +" \n </Info> \n");
+            out.println("<Info> \n "+ DubboHandler.INSTANCE.accountService.freezeUnfreeze(id,true) +" \n </Info> \n");
         else if(msg.equals("Active"))
-            out.println("<Info> \n "+ active(userID) +" \n </Info> \n");
+            out.println("<Info> \n "+ DubboHandler.INSTANCE.accountService.freezeUnfreeze(id,false) +" \n </Info> \n");
         else if(msg.equals("ChangePwd"))
         {
             String pwd1=request.getParameter("pwd1");
             String pwd2=request.getParameter("pwd2");
-            out.println("<Info> \n "+ changePwd(pwd1,pwd2) +" \n </Info> \n");
+            try {
+                boolean result = DubboHandler.INSTANCE.accountService.userPasswdChanging(id, pwd1, pwd2);
+                out.println("<Info> \n " + result + " \n </Info> \n");
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         }
         else if(msg.equals("Load"))
         {
-            getInfo(userID);
-            out.println("<Info> \n "+ ID +" \n </Info> \n");
-            out.println("<Info> \n "+ UserName +" \n </Info> \n");
-            out.println("<Info> \n "+ TrueName +" \n </Info> \n");
+            Map p=DubboHandler.INSTANCE.accountService.userInformation(id);
+            if(p.get("ifFrozen").toString()=="1")
+                State="冻结";
+            else State="激活";
+            out.println("<Info> \n "+ userID +" \n </Info> \n");
+            out.println("<Info> \n "+ p.get("userName").toString() +" \n </Info> \n");
+            out.println("<Info> \n "+ p.get("userRealName").toString() +" \n </Info> \n");
             out.println("<Info> \n "+ State +" \n </Info> \n");
         }
         out.println("</Information>");
@@ -44,25 +56,6 @@ public class UserInfo extends HttpServlet{
             throws ServletException, IOException
     {
         doGet(request,response);
-    }
-
-    public void getInfo(String userID){
-        ID="123456";
-        UserName="DeadPool";
-        TrueName="Wed";
-        State="可使用";
-    }
-
-    public String freeze(String userID){
-        return "true";
-    }
-
-    public String active(String userID){
-        return "true";
-    }
-
-    public String changePwd(String pwd1,String pwd2){
-        return "true";
     }
 
 }

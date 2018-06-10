@@ -27,7 +27,6 @@ public class Login extends HttpServlet {
         String type=request.getParameter("Type");
         out.println("<Information> \n ");
         int num = DubboHandler.INSTANCE.accountService.userLogin(username, password);
-        System.out.println(num);
         if(type.equals("1")&&num>0)
             out.println("<Info> \n "+ String.valueOf(num) +" \n </Info> \n");
         else if(type.equals("2")&&num>0)
@@ -39,18 +38,6 @@ public class Login extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);
-    }
-
-    private int succeed1(String username,String password){
-        if(username.equals("Hestia")&&password.equals("123456"))
-            return 1;
-        return -1;
-    }
-
-    private int succeed2(String username,String password){
-        if(username.equals("OOO")&&password.equals("123456"))
-            return 1;
-        return -1;
     }
 
 }

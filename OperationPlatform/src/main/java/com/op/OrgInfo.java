@@ -1,6 +1,7 @@
 package com.op;
 
 import java.io.*;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -8,22 +9,26 @@ import javax.servlet.http.HttpServletResponse;
 
 public class OrgInfo extends HttpServlet{
 
-    private String ID,OrgName1,OrgName2,Classification,PersonName,PhoneNumber;
+    private String Classification;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        String orgID=request.getParameter("orgID");
-        getInfo(orgID);
         response.setContentType("text/xml;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        String orgID=request.getParameter("orgID");
+        int id=Integer.valueOf(orgID).intValue();
+        Map p=DubboHandler.INSTANCE.accountService.agencyInformation(id);
+        System.out.println(134534534);
+        Classification="学校";
+
         out.println("<Information> \n ");
-        out.println("<Info> \n "+ ID +" \n </Info> \n");
-        out.println("<Info> \n "+ OrgName1 +" \n </Info> \n");
-        out.println("<Info> \n "+ OrgName2 +" \n </Info> \n");
+        out.println("<Info> \n "+ p.get("agencyID").toString() +" \n </Info> \n");
+        out.println("<Info> \n "+ p.get("agencyName").toString() +" \n </Info> \n");
+        out.println("<Info> \n "+ p.get("agencyName").toString() +" \n </Info> \n");
         out.println("<Info> \n "+ Classification +" \n </Info> \n");
-        out.println("<Info> \n "+ PersonName +" \n </Info> \n");
-        out.println("<Info> \n "+ PhoneNumber +" \n </Info> \n");
+        out.println("<Info> \n "+ p.get("agentName").toString() +" \n </Info> \n");
+        out.println("<Info> \n "+ p.get("agentTel").toString() +" \n </Info> \n");
         out.println("</Information>");
     }
 
@@ -33,12 +38,4 @@ public class OrgInfo extends HttpServlet{
         doGet(request,response);
     }
 
-    public void getInfo(String orgID){
-        ID="123456";
-        OrgName1="北京航空航天大学";
-        OrgName2="北京航空航天大学";
-        Classification="学校";
-        PersonName="徐惠彬";
-        PhoneNumber="12345678901";
-    }
 }

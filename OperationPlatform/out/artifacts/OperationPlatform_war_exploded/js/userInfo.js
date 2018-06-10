@@ -12,14 +12,18 @@ jQuery(document).ready(function($) {
 function Freeze() {
     var arr = document.cookie.match(new RegExp("(^| )"+"userID"+"=([^;]*)(;|$)"));
     var msg="Freeze";
+    var id;
+    if(arr==null)
+        id=28;
+    else id=arr[2];
     $.ajax({
         type:"POST",
         url:"http://localhost:8080/OP/UserInfo",
         dataType: "xml",
-        data:{userID:arr[2],msg:msg},
+        data:{userID:id,msg:msg},
         success: function (data) {
             var info=data.getElementsByTagName("Info");
-            var flag=info[0].firstChild.nodeValue!="false";
+            var flag=info[0].firstChild.nodeValue!="0";
             if (!flag)
                 alert("账户冻结失败 !");
             else alert("账户冻结成功 !");
@@ -35,14 +39,18 @@ function Freeze() {
 function Active() {
     var arr = document.cookie.match(new RegExp("(^| )"+"userID"+"=([^;]*)(;|$)"));
     var msg="Active";
+    var id;
+    if(arr==null)
+        id=28;
+    else id=arr[2];
     $.ajax({
         type:"POST",
         url:"http://localhost:8080/OP/UserInfo",
         dataType: "xml",
-        data:{userID:arr[2],msg:msg},
+        data:{userID:id,msg:msg},
         success: function (data) {
             var info=data.getElementsByTagName("Info");
-            var flag=info[0].firstChild.nodeValue!="false";
+            var flag=info[0].firstChild.nodeValue!="0";
             if (!flag)
                 alert("账户激活失败 !");
             else alert("账户激活成功 !");
@@ -60,11 +68,15 @@ function ChangePwd() {
     var msg="ChangePwd";
     var pwd1=document.getElementById("pwd1").value;
     var pwd2=document.getElementById("pwd2").value;
+    var id;
+    if(arr==null)
+        id=28;
+    else id=arr[2];
     $.ajax({
         type:"POST",
         url:"http://localhost:8080/OP/UserInfo",
         dataType: "xml",
-        data:{userID:arr[2],msg:msg,pwd1:pwd1,pwd2:pwd2},
+        data:{userID:id,msg:msg,pwd1:pwd1,pwd2:pwd2},
         success: function (data) {
             var info=data.getElementsByTagName("Info");
             var flag=info[0].firstChild.nodeValue!="false";
@@ -82,13 +94,14 @@ function ChangePwd() {
 
 function loadXMLDoc()
 {
-    var arr = document.cookie.match(new RegExp("(^| )"+"userID"+"=([^;]*)(;|$)"));
+    var arr =document.cookie.match(new RegExp("(^| )"+"userID"+"=([^;]*)(;|$)"));
     var msg="Load";
+    var id=28;
     $.ajax({
         type:"POST",
         url:"http://localhost:8080/OP/UserInfo",
         dataType: "xml",
-        data:{userID:arr[2],msg:msg},
+        data:{userID:id,msg:msg},
         success: function (data) {
             var info=data.getElementsByTagName("Info");
             document.getElementById("ID").innerHTML=info[0].firstChild.nodeValue;

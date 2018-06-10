@@ -1,11 +1,15 @@
 function loadXMLDoc()
 {
     var arr = document.cookie.match(new RegExp("(^| )"+"userID"+"=([^;]*)(;|$)"));
+    var id;
+    if(arr==null)
+        id=2;
+    else id=arr[2];
     $.ajax({
         type:"POST",
         url:"http://localhost:8080/OP/OrgInfo",
         dataType: "xml",
-        data:{userID:arr[2]},
+        data:{orgID:id},
         success: function (data) {
             var info=data.getElementsByTagName("Info");
             document.getElementById("ID").innerHTML=info[0].firstChild.nodeValue;

@@ -26,9 +26,8 @@ function validate1() {
         dataType: "xml",
         data:{UserName:username,Password:password,Type:1},
         success: function (data) {
-            alert(data);
             var info=data.getElementsByTagName("Info");
-            /*var flag=((info[0].firstChild.nodeValue)!="false");
+            var flag=((info[0].firstChild.nodeValue)!="false");
             if (!flag)
                 alert("用户名或密码不正确，请重新登录 !");
             else {
@@ -39,7 +38,7 @@ function validate1() {
                 location.href ="./userInfo.html";
                 location.href="./userTradeCheck.html";
                 window.location.href="./userInfo.html";
-            }*/
+            }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown,data) {
             alert(XMLHttpRequest.readyState);

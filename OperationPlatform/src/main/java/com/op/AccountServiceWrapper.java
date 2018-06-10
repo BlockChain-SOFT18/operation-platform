@@ -14,11 +14,12 @@ public class AccountServiceWrapper implements AccountService{
     }
 
     public int userLogin(String user_name, String user_passwd) throws UserNotExistException, UserFrozenException {
-        if(accountService==null)
-            System.out.println("null!");
-        else System.out.println("not null!");
-        if(accountService!=null)
-            return accountService.userLogin(user_name,user_passwd);
+        if(accountService!=null) {
+            int result=-1;//accountService.userLogin(user_name, user_passwd);
+            if(result>0)
+                return result;
+            else return 3;
+        }
         else return -1;
     }
 
@@ -39,7 +40,13 @@ public class AccountServiceWrapper implements AccountService{
     }
 
     public Map agencyInformation(int agency_id) {
-        return accountService.agencyInformation(agency_id);
+        //return accountService.agencyInformation(agency_id);
+        Map p=new HashMap();
+        p.put("agencyID",1);
+        p.put("agencyName","北京航空航天大学");
+        p.put("agentName","徐惠彬");
+        p.put("agentTel","15652575555");
+        return p;
     }
 
     public List<Integer> agencyAllUser(int agency_id) {
@@ -47,10 +54,12 @@ public class AccountServiceWrapper implements AccountService{
     }
 
     public Map userInformation(int user_id) {
-        if(accountService!=null)
-            return accountService.userInformation(user_id);
+        /*if(accountService!=null)
+            return accountService.userInformation(user_id);*/
         Map p=new HashMap();
-        p.put("userRealName","YZL");
+        p.put("userName","Hestia");
+        p.put("userRealName","LXH");
+        p.put("ifFrozen",1);
         return p;
     }
 
@@ -63,36 +72,45 @@ public class AccountServiceWrapper implements AccountService{
     }
 
     public List<Map<String, String>> agencyTradeInformation(int agency_id, String start_date, String end_date, int trade_type) {
-        return accountService.agencyTradeInformation(agency_id, start_date, end_date, trade_type);
+        List<Map<String,String>> l=accountService.agencyTradeInformation(agency_id, start_date, end_date, trade_type);
+        if(l==null)
+        {
+            System.out.println("NULL RESPONSE FROM AS");
+            l=new ArrayList<Map<String, String>>();
+            for(int i=0;i<3;i++)
+            {
+                Map p=new HashMap<String,String>();
+                p.put("OrderID",i+1);
+                p.put("date_time","2018-06-04 12:00:00");
+                p.put("user_id",i*10+3);
+                p.put("type","转账");
+                p.put("sum",100.00);
+                l.add(p);
+            }
+            return l;
+        }
+        else return l;
     }
 
     public List<Map<String, String>> userTradeInformation(int user_id, String start_date, String end_date, int trade_type) {
         List<Map<String, String>> l= accountService.userTradeInformation(user_id, start_date, end_date, trade_type);
-        if(l==null){
+        if(l==null)
+        {
             System.out.println("NULL RESPONSE FROM AS");
-            Random random=new Random();
             l=new ArrayList<Map<String, String>>();
-            for (int i=0;i<5;i++){
-                Map<String,String>map=new HashMap<String, String>();
-
-                switch (trade_type){
-                    case 0:
-                        map.put("UT"+String.valueOf(i+20),"{\"date_time\":\"2018-06-04 12:00:00\",\"institution_id\":\"1\",\"sum\":\"100.00\",\"type\":\"true\",\"user_id\":\""+String.valueOf(user_id)+"\"}");
-                        break;
-                    case 1:
-                        map.put("UT"+String.valueOf(i+30),"{\"date_time\":\"2018-06-04 12:00:00\",\"institution_id\":\"1\",\"sum\":\"100.00\",\"type\":\"true\",\"user_id\":\""+String.valueOf(user_id)+"\"}");
-                        break;
-                    case 2:
-                        if (i%2==0)
-                            map.put("UT"+String.valueOf(i),"{\"collection_institution_id\":\"1\",\"collection_user_id\":\""+String.valueOf(user_id)+"\",\"date_time\":\"2018-06-04 12:0"+i+":00\",\"payment_institution_id\":\"1\",\"payment_user_id\":\"3\",\"sum\":\"23.33\",\"type\":\"true\"}");
-                        else map.put("UT"+String.valueOf(i+10),"{\"collection_institution_id\":\"1\",\"collection_user_id\":\"3\",\"date_time\":\"2018-06-04 12:0"+(9-i)+":00\",\"payment_institution_id\":\"1\",\"payment_user_id\":\""+String.valueOf(user_id)+"\",\"sum\":\"23.33\",\"type\":\"true\"}");
-                        break;
-                }
-                l.add(map);
+            for(int i=0;i<3;i++)
+            {
+                Map p=new HashMap<String,String>();
+                p.put("OrderID",i+1);
+                p.put("date_time","2018-06-04 12:00:00");
+                p.put("user_id",i*10+5);
+                p.put("type","转账");
+                p.put("sum",100.00);
+                l.add(p);
             }
-
+            return l;
         }
-        return l;
+        else return l;
     }
 
     public boolean transferConsume(int pay_user_id, int get_user_id, double amount, boolean trade_type) throws UserNotExistException, UserFrozenException {

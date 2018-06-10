@@ -22,7 +22,11 @@ app.controller('customersCtrl', function($scope, $http) {
         var startDate=document.getElementById("StartDate").value;
         var endDate=document.getElementById("EndDate").value;
         var att="Search";
-        var postData=$.param({orgID:arr[2],UserID:userID,TradeType:tradeType,StartDate:startDate, EndDate:endDate,att:att});
+        var id;
+        if(arr==null)
+            id=2;
+        else id=arr[2];
+        var postData=$.param({orgID:id,UserID:userID,TradeType:tradeType,StartDate:startDate, EndDate:endDate,att:att});
         $http({
             method:"POST",
             url:"http://localhost:8080/OP/ManualCharge",
@@ -40,7 +44,11 @@ app.controller('customersCtrl', function($scope, $http) {
         var att="Adjust";
         var changeID=$scope.Info[Count].UserID;
         var money=$scope.Info[Count].Money;
-        var postData=$.param({orgID:arr[2],ChangeID:changeID,Money:money,att:att});
+        var id;
+        if(arr==null)
+            id=2;
+        else id=arr[2];
+        var postData=$.param({orgID:id,ChangeID:changeID,Money:money,att:att});
         $http({
             method:"POST",
             url:"http://localhost:8080/OP/ManualCharge",

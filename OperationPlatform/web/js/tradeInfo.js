@@ -5,7 +5,11 @@ app.controller('customersCtrl', function($scope, $http) {
         var tradeType=document.getElementById("TradeType").value;
         var Date1=document.getElementById("Date1").value;
         var Date2=document.getElementById("Date2").value;
-        var postData=$.param({orgID:arr[2],TradeType:tradeType,Date1:Date1, Date2:Date2});
+        var id;
+        if(arr==null)
+            id=2;
+        else id=arr[2];
+        var postData=$.param({orgID:id,TradeType:tradeType,Date1:Date1, Date2:Date2});
         $http({
             method:"POST",
             url:"http://localhost:8080/OP/TradeInfo",

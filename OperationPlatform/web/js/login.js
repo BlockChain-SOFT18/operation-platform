@@ -26,7 +26,6 @@ function validate1() {
         dataType: "xml",
         data:{UserName:username,Password:password,Type:1},
         success: function (data) {
-            alert(data);
             var info=data.getElementsByTagName("Info");
             var flag=((info[0].firstChild.nodeValue)!="false");
             if (!flag)

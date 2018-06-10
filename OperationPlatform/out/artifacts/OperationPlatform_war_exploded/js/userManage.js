@@ -23,7 +23,11 @@ app.controller('customersCtrl', function($scope, $http) {
         var userName=document.getElementById("UserName").value;
         var state=document.getElementById("State").value;
         var att="Search";
-        var postData=$.param({orgID:arr[2],UserID:userID,UserName:userName, State:state,att:att});
+        var id;
+        if(arr==null)
+            id=2;
+        else id=arr[2];
+        var postData=$.param({orgID:id,UserID:userID,UserName:userName, State:state,att:att});
         $http({
             method:"POST",
             url:"http://localhost:8080/OP/UserManage",
@@ -40,7 +44,11 @@ app.controller('customersCtrl', function($scope, $http) {
         var arr = document.cookie.match(new RegExp("(^| )"+"orgID"+"=([^;]*)(;|$)"));
         var att="Freeze";
         var changeID=$scope.Info[Count].UserID;
-        var postData=$.param({orgID:arr[2],ChangeID:changeID,att:att});
+        var id;
+        if(arr==null)
+            id=2;
+        else id=arr[2];
+        var postData=$.param({orgID:id,ChangeID:changeID,att:att});
         $http({
             method:"POST",
             url:"http://localhost:8080/OP/UserManage",
@@ -57,7 +65,11 @@ app.controller('customersCtrl', function($scope, $http) {
         var arr = document.cookie.match(new RegExp("(^| )"+"orgID"+"=([^;]*)(;|$)"));
         var att="Active";
         var changeID=$scope.Info[Count].UserID;
-        var postData=$.param({orgID:arr[2],ChangeID:changeID,att:att});
+        var id;
+        if(arr==null)
+            id=2;
+        else id=arr[2];
+        var postData=$.param({orgID:id,ChangeID:changeID,att:att});
         $http({
             method:"POST",
             url:"http://localhost:8080/OP/UserManage",

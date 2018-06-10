@@ -16,7 +16,11 @@ app.controller('customersCtrl', function($scope, $http) {
         var fileType=document.getElementById("FileType").value;
         var accountType=document.getElementById("AccountType").value;
         var accountTime=document.getElementById("AccountTime").value;
-        var postData=$.param({orgID:arr[2],FileType:fileType,AccountType:accountType,AccountTime:accountTime});
+        var id;
+        if(arr==null)
+            id=2;
+        else id=arr[2];
+        var postData=$.param({orgID:id,FileType:fileType,AccountType:accountType,AccountTime:accountTime});
         $http({
             method:"POST",
             url:"http://localhost:8080/OP/FileDownload",
