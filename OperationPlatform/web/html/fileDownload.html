@@ -100,34 +100,39 @@
                                 <div class="panel-body">
                                     <form role="form">
                                         <div class="row">
-                                            <div class="col-lg-4">
+                                            <div class="col-lg-3">
                                                 <div class="form-group">
                                                     <label>对账文件类型</label>
                                                     <select class="form-control" id="FileType">
                                                         <option>下游对账文件</option>
+                                                        <option>上游对账文件</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-lg-3">
                                                 <div class="form-group">
                                                     <label>对账类型</label>
                                                     <select class="form-control" id="AccountType">
                                                         <option>全部</option>
+                                                        <option>充值</option>
+                                                        <option>提现</option>
+                                                        <option>消费</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <label>账期</label>
-                                                    <input class="form-control" id="AccountTime">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-lg-9"></div>
                                             <div class="col-lg-3">
                                                 <div class="form-group">
+                                                    <label>账期</label>
+                                                    <select class="form-control" id="AccountTime">
+                                                        <option>最近15天</option>
+                                                        <option>最近7天</option>
+                                                        <option>最近3天</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="form-group">
+                                                    <label>搜索</label>
                                                     <button class="btn btn-default btn-group-justified" type="button" ng-click="Search()"><i class="fa fa-search"></i>
                                                     </button>
                                                 </div>

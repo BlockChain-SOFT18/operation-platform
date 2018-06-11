@@ -7,44 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2cc53b4-4b67-48bb-ae92-c27f4cb3e3cb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/op/Encrypt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OperationPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OperationPlatform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/WEB-INF/classes/com/op/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/WEB-INF/classes/com/op/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/WEB-INF/classes/com/op/OrgInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/WEB-INF/classes/com/op/OrgInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/WEB-INF/classes/com/op/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/WEB-INF/classes/com/op/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/WEB-INF/classes/com/op/UserTradeCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/WEB-INF/classes/com/op/UserTradeCheck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/html/userTradeCheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/html/userTradeCheck.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/fileDownload.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/fileDownload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/orgInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/orgInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/tradeCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/tradeCheck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/tradeInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/tradeInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/userInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/userInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/userTradeCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OperationPlatform_war_exploded/js/userTradeCheck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/op/AccountServiceWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/AccountServiceWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/op/CSSystemWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/CSSystemWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/op/FileDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/FileDownload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/op/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/op/OrgInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/OrgInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/op/TradeCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/TradeCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/op/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/op/UserManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/UserManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/op/UserTradeCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/UserTradeCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/op/ManualCharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/ManualCharge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/op/Poundage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/op/Poundage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/fileDownload.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/fileDownload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/manualCharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/manualCharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/poundage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/poundage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/html/tradeCheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/tradeCheck.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/html/tradeInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/tradeInfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/html/userManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/userManage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/html/userTradeCheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/userTradeCheck.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/fileDownload.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/fileDownload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/manualCharge.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/manualCharge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/orgInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/orgInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/poundage.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/poundage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/tradeCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/tradeCheck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/tradeInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/tradeInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/userInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/userInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/userManage.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/userManage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/userTradeCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/userTradeCheck.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,34 +32,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="UserInfo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/op/UserInfo.java">
+      <file leaf-file-name="CSSystemWrapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/op/CSSystemWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="49" selection-start-line="49" selection-end-line="51" selection-end-column="28" />
+            <state relative-caret-position="280">
+              <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountServiceWrapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/op/AccountServiceWrapper.java">
+      <file leaf-file-name="Poundage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/op/Poundage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1387">
-              <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
-              <folding>
-                <element signature="e#2270#2271#0" expanded="true" />
-                <element signature="e#2332#2333#0" expanded="true" />
-                <element signature="e#5311#5312#0" expanded="true" />
-                <element signature="e#5366#5367#0" expanded="true" />
-                <element signature="e#5401#5402#0" expanded="true" />
-                <element signature="e#5447#5448#0" expanded="true" />
-                <element signature="e#5491#5492#0" expanded="true" />
-                <element signature="e#5546#5547#0" expanded="true" />
-                <element signature="e#5583#5584#0" expanded="true" />
-                <element signature="e#5631#5632#0" expanded="true" />
-                <element signature="e#5677#5678#0" expanded="true" />
-                <element signature="e#5734#5735#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1800">
+              <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTradeCheck.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/op/UserTradeCheck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -115,14 +85,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/op/UserTradeCheck.java" />
         <option value="$PROJECT_DIR$/src/com/op/TradeInfo.java" />
-        <option value="$PROJECT_DIR$/web/html/manualCharge.html" />
         <option value="$PROJECT_DIR$/src/com/op/Poundage.java" />
-        <option value="$PROJECT_DIR$/web/html/poundage.html" />
         <option value="$PROJECT_DIR$/src/com/op/ManualCharge.java" />
         <option value="$PROJECT_DIR$/src/com/op/UserManage.java" />
-        <option value="$PROJECT_DIR$/web/html/fileDownload.html" />
         <option value="$PROJECT_DIR$/src/com/op/FileDownload.java" />
         <option value="$PROJECT_DIR$/src/com/op/UserInfo.java" />
         <option value="$PROJECT_DIR$/web/html/userInfo.html" />
@@ -134,7 +100,6 @@
         <option value="$PROJECT_DIR$/target/classes/spring.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-config.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-consumer.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/op/Poundage.java" />
         <option value="$PROJECT_DIR$/src/main/resources/CSSystem-consumer.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/AccountService-consumer.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring.xml" />
@@ -143,29 +108,34 @@
         <option value="$PROJECT_DIR$/web/html/login.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/op/Encrypt.java" />
-        <option value="$PROJECT_DIR$/web/html/userTradeCheck.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/op/FileDownload.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/op/OrgInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/op/CSSystemWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/op/UserTradeCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/op/UserInfo.java" />
         <option value="$PROJECT_DIR$/web/js/userInfo.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/op/Login.java" />
-        <option value="$PROJECT_DIR$/web/html/tradeCheck.html" />
         <option value="$PROJECT_DIR$/web/js/login.js" />
         <option value="$PROJECT_DIR$/web/js/orgInfo.js" />
-        <option value="$PROJECT_DIR$/web/html/userManage.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/op/TradeCheck.java" />
         <option value="$PROJECT_DIR$/web/js/userManage.js" />
         <option value="$PROJECT_DIR$/web/js/tradeCheck.js" />
         <option value="$PROJECT_DIR$/web/js/poundage.js" />
         <option value="$PROJECT_DIR$/web/js/fileDownload.js" />
-        <option value="$PROJECT_DIR$/web/js/manualCharge.js" />
         <option value="$PROJECT_DIR$/web/js/userTradeCheck.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/op/UserManage.java" />
-        <option value="$PROJECT_DIR$/web/html/tradeInfo.html" />
-        <option value="$PROJECT_DIR$/web/js/tradeInfo.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/op/AccountServiceWrapper.java" />
+        <option value="$PROJECT_DIR$/web/js/manualCharge.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/op/ManualCharge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/op/FileDownload.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/op/CSSystemWrapper.java" />
+        <option value="$PROJECT_DIR$/web/html/fileDownload.html" />
+        <option value="$PROJECT_DIR$/web/html/tradeInfo.html" />
+        <option value="$PROJECT_DIR$/web/html/tradeCheck.html" />
+        <option value="$PROJECT_DIR$/web/html/userManage.html" />
+        <option value="$PROJECT_DIR$/web/html/poundage.html" />
+        <option value="$PROJECT_DIR$/web/html/manualCharge.html" />
+        <option value="$PROJECT_DIR$/web/js/tradeInfo.js" />
+        <option value="$PROJECT_DIR$/web/html/userTradeCheck.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/op/Poundage.java" />
       </list>
     </option>
   </component>
@@ -211,9 +181,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,10 +239,34 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="OperationPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="OperationPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="BlockChain-api" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="OperationPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="BlockChain-api" type="70bed36:NamedLibraryElementNode" />
+              <item name="BlockChain-api.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OperationPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="BlockChain-api" type="70bed36:NamedLibraryElementNode" />
+              <item name="BlockChain-api.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -600,11 +592,12 @@
       <workItem from="1528631404626" duration="7557000" />
       <workItem from="1528682814736" duration="6827000" />
       <workItem from="1528711226017" duration="2406000" />
+      <workItem from="1528713754741" duration="7479000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142553000" />
+    <option name="totallyTimeSpent" value="150032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -628,11 +621,11 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34545454" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34545454" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2734375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2734375" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -664,11 +657,11 @@
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3298647" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info id="Nl-Palette" order="2" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30364582" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -677,7 +670,7 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
   </component>
@@ -709,27 +702,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.m2/repository/com/alibaba/dubbo/2.6.1/dubbo-2.6.1.jar!/com/alibaba/dubbo/common/compiler/Compiler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/BeanFactoryUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/com/alibaba/dubbo/2.6.1/dubbo-2.6.1.jar!/com/alibaba/dubbo/config/spring/ReferenceBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-beans/5.0.5.RELEASE/spring-beans-5.0.5.RELEASE.jar!/org/springframework/beans/BeanUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -795,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/userInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
@@ -830,13 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/ManualCharge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/op/TradeInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -858,27 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/userTradeCheck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/Poundage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/BlockChain-api.jar!/com/altale/service/CSSystem.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
@@ -893,34 +830,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/CSSystemWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/UserTradeCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/op/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/tradeCheck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
         </state>
       </provider>
     </entry>
@@ -935,20 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/fileDownload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/manualCharge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -980,24 +879,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/FileDownload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/op/TradeCheck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/userManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-703">
-          <caret line="122" column="74" selection-start-line="122" selection-start-column="74" selection-end-line="122" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -1015,13 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/tradeInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/orgInfo.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1032,38 +910,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/tradeInfo.js">
+    <entry file="jar://E:/BlockChain-api.jar!/com/altale/service/CSSystem.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="114">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/AccountServiceWrapper.java">
+    <entry file="file://$PROJECT_DIR$/web/js/manualCharge.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
-          <folding>
-            <element signature="e#2270#2271#0" expanded="true" />
-            <element signature="e#2332#2333#0" expanded="true" />
-            <element signature="e#5311#5312#0" expanded="true" />
-            <element signature="e#5366#5367#0" expanded="true" />
-            <element signature="e#5401#5402#0" expanded="true" />
-            <element signature="e#5447#5448#0" expanded="true" />
-            <element signature="e#5491#5492#0" expanded="true" />
-            <element signature="e#5546#5547#0" expanded="true" />
-            <element signature="e#5583#5584#0" expanded="true" />
-            <element signature="e#5631#5632#0" expanded="true" />
-            <element signature="e#5677#5678#0" expanded="true" />
-            <element signature="e#5734#5735#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="375">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/op/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
+        <state relative-caret-position="262">
           <caret line="49" selection-start-line="49" selection-end-line="51" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/AccountServiceWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-817">
+          <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+          <folding>
+            <element signature="e#5677#5678#0" expanded="true" />
+            <element signature="e#5725#5726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/ManualCharge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/fileDownload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/userManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="131" column="76" selection-start-line="131" selection-start-column="76" selection-end-line="131" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/poundage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/manualCharge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="134" column="54" lean-forward="true" selection-start-line="134" selection-start-column="54" selection-end-line="134" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/tradeInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/userInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/tradeInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="120" column="96" lean-forward="true" selection-start-line="120" selection-start-column="96" selection-end-line="120" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/fileDownload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="132" column="66" lean-forward="true" selection-start-line="132" selection-start-column="66" selection-end-line="132" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/tradeCheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="142" column="46" lean-forward="true" selection-start-line="136" selection-start-column="40" selection-end-line="142" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/userTradeCheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="113" column="50" lean-forward="true" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/FileDownload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="58" column="26" lean-forward="true" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/CSSystemWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/Poundage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/op/UserTradeCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
         </state>
       </provider>
     </entry>

@@ -4,6 +4,9 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,29 +17,44 @@ public class ManualCharge extends HttpServlet{
     private String[] OrderID,OrderTime,UserID,TradeType,TradeMoney,TradeState;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
         String orgID=request.getParameter("orgID");
         String att=request.getParameter("att");
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+
         JSONObject json=new JSONObject();
         if(att.equals("Search"))
         {
             String tradeType=request.getParameter("TradeType");
-            String userID=request.getParameter("UserID");
-            String startDate=request.getParameter("StartDate");
-            String endDate=request.getParameter("EndDate");
-            searchInfo(orgID,tradeType,userID,startDate,endDate);
-            for(int i=0;i<UserID.length;i++)
+            int type=0;
+            if(tradeType.equals("充值"))
+                type=0;
+            else if(tradeType.equals("提现"))
+                type=1;
+            else if(tradeType.equals("消费"))
+                type=2;
+            String time=request.getParameter("Time");
+            int days=0;
+            if(time.equals("最近15天"))
+                days=15;
+            else if(time.equals("最近7天"))
+                days=7;
+            else if(time.equals("最近3天"))
+                days=3;
+            DateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String s=DubboHandler.INSTANCE.csSystem.QueryRecord(df.format(new Date().getTime()-days*24*60*60*1000),df.format(new Date()),type);
+            JSONArray jsonArray=JSONArray.fromString(s);
+            for(int i=0;i<jsonArray.length();i++)
             {
+                JSONObject jo=jsonArray.getJSONObject(i);
                 JSONObject jsonObject=new JSONObject();
-                jsonObject.put("OrderID",OrderID[i]);
-                jsonObject.put("OrderTime",OrderTime[i]);
-                jsonObject.put("UserID",UserID[i]);
-                jsonObject.put("TradeType",TradeType[i]);
-                jsonObject.put("TradeMoney",TradeMoney[i]);
-                jsonObject.put("TradeState",TradeState[i]);
+                jsonObject.put("OrderID",jo.get("Request_id"));
+                jsonObject.put("OrderTime",jo.get("Request_time"));
+                jsonObject.put("UserID",jo.get("Merchant_id"));
+                jsonObject.put("TradeType",tradeType);
+                jsonObject.put("TradeMoney",jo.get("Amt"));
+                jsonObject.put("TradeState",jo.get("Operate_status"));
                 json.put("Info",jsonObject);
             }
         }
@@ -51,35 +69,13 @@ public class ManualCharge extends HttpServlet{
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
         doGet(request,response);
     }
 
-    public void searchInfo(String orgID,String tradeType,String userID,String startDate,String endDate){
-        OrderID=new String[2];
-        OrderTime=new String[2];
-        UserID=new String[2];
-        TradeType=new String[2];
-        TradeMoney=new String[2];
-        TradeState=new String[2];
-
-        OrderID[0]="654321";
-        OrderTime[0]="2018/4/1 23:59:59";
-        UserID[0]="233333";
-        TradeType[0]="转账";
-        TradeMoney[0]="1000";
-        TradeState[0]="完成";
-
-        OrderID[1]="521314";
-        OrderTime[1]="2018/4/2 00:00:00";
-        UserID[1]="123131";
-        TradeType[1]="充值";
-        TradeMoney[1]="10000";
-        TradeState[1]="处理中";
-    }
-
     public void adjust(String orgID,String changeID,String money){
-
+        int id=Integer.valueOf(changeID);
+        double sum=Double.valueOf(money);
+        DubboHandler.INSTANCE.accountService.reCharge(id,sum,true);
     }
 }

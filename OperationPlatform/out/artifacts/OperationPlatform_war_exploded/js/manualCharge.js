@@ -18,11 +18,9 @@ app.controller('customersCtrl', function($scope, $http) {
     $scope.Search=function () {
         var arr = document.cookie.match(new RegExp("(^| )"+"orgID"+"=([^;]*)(;|$)"));
         var tradeType=document.getElementById("TradeType").value;
-        var userID=document.getElementById("UserID").value;
-        var startDate=document.getElementById("StartDate").value;
-        var endDate=document.getElementById("EndDate").value;
+        var time=document.getElementById("Time").value;
         var att="Search";
-        var postData=$.param({orgID:arr[2],UserID:userID,TradeType:tradeType,StartDate:startDate, EndDate:endDate,att:att});
+        var postData=$.param({orgID:arr[2],TradeType:tradeType,Time:time,att:att});
         $http({
             method:"POST",
             url:"../ManualCharge",
@@ -50,6 +48,7 @@ app.controller('customersCtrl', function($scope, $http) {
             data:postData
         }).then(function (result) {
             alert(result.data.Info);
+            window.location.reload();
         });
     };
 

@@ -3,7 +3,7 @@ function loadXMLDoc() {
         element: 'myfirstchart',
         data: [
             { year: '2014', value: 20 },
-            { year: '2005', value: 10 },
+            { year: '2015', value: 10 },
             { year: '2016', value: 5 },
             { year: '2017', value: 5 },
             { year: '2018', value: 20 }

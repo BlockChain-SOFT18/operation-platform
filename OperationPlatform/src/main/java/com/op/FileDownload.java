@@ -2,11 +2,14 @@ package com.op;
 
 import buaa.jj.accountservice.api.AccountService;
 import com.altale.service.CSSystem;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,39 +28,40 @@ public class FileDownload extends HttpServlet{
         String fileType = request.getParameter("FileType");
         String accountType = request.getParameter("AccountType");
         String accountTime = request.getParameter("AccountTime");
+        int type=0;
+        if(accountType.equals("充值"))
+            type=1;
+        else if(accountType.equals("提现"))
+            type=2;
+        else if(accountType.equals("消费"))
+            type=3;
+        int days=0;
+        if(accountTime.equals("最近15天"))
+            days=15;
+        else if(accountTime.equals("最近7天"))
+            days=7;
+        else if(accountTime.equals("最近3天"))
+            days=3;
 
-        String s=DubboHandler.INSTANCE.csSystem.DownloadFile(accountTime);
+        String s=DubboHandler.INSTANCE.csSystem.DownloadFile(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date().getTime()-days*24*60*60*1000));
         System.out.println(s);
-        JSONObject json = new JSONObject(s);
-        searchInfo(orgID, fileType, accountType, accountTime);
-        for (int i = 0; i < FileName.length; i++)
+        JSONArray jsonArray=JSONArray.fromString(s);
+        JSONObject json = new JSONObject();
+        for (int i = 0; i < jsonArray.length(); i++)
         {
+            JSONObject jo=jsonArray.getJSONObject(i);
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("No", i+1);
-            jsonObject.put("FileName", FileName[i]);
-            jsonObject.put("Address", Address[i]);
+            jsonObject.put("FileName", jo.get("FileName"));
+            jsonObject.put("Address", jo.get("Address"));
             json.put("Info", jsonObject);
         }
         out.println(json);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
         doGet(request,response);
     }
 
-    public void searchInfo(String orgID,String fileType,String accountType,String accountTime){
-        FileName=new String[3];
-        Address=new String [3];
-
-        FileName[0]="支付宝";
-        Address[0]="www.baidu.com";
-
-        FileName[1]="微信";
-        Address[1]="www.google.com";
-
-        FileName[2]="QQ钱包";
-        Address[2]="www.taobao.com";
-    }
 }
