@@ -30,7 +30,7 @@ public class CSSystemWrapper implements CSSystem{
     }
 
     public String DownloadFile(String var1) throws TimeOutOfRangeException{
-        return "23333";//csSystem.DownloadFile(var1);
+        return csSystem.DownloadFile(var1);
     }
 
 }

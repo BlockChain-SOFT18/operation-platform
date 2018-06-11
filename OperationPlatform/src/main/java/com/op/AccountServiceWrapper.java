@@ -14,17 +14,17 @@ public class AccountServiceWrapper implements AccountService{
     }
 
     public int userLogin(String user_name, String user_passwd) throws UserNotExistException, UserFrozenException {
-        if(accountService!=null) {
-            int result=-1;//accountService.userLogin(user_name, user_passwd);
-            if(result>0)
-                return result;
-            else return 3;
-        }
+        if(accountService!=null)
+            return 19;//测试数据
+            // accountService.userLogin(user_name, user_passwd);
         else return -1;
     }
 
     public int agencyLogin(String agency_name, String agency_passwd) {
-        return accountService.agencyLogin(agency_name,agency_passwd);
+        if(accountService!=null)
+            return 2;//测试数据
+        //accountService.agencyLogin(agency_name,agency_passwd);
+        else return -1;
     }
 
     public int userRegister(String user_name, String user_passwd, String user_realname, String user_tel, String user_email, String user_identity, int under_agency_id) throws NameDuplicateException, UserAgencyDuplicateException, AgencyNotExistException {
@@ -40,8 +40,10 @@ public class AccountServiceWrapper implements AccountService{
     }
 
     public Map agencyInformation(int agency_id) {
-        //return accountService.agencyInformation(agency_id);
+        if(accountService!=null)
+            return accountService.agencyInformation(agency_id);
         Map p=new HashMap();
+        //测试数据
         p.put("agencyID",1);
         p.put("agencyName","北京航空航天大学");
         p.put("agentName","徐惠彬");
@@ -54,9 +56,10 @@ public class AccountServiceWrapper implements AccountService{
     }
 
     public Map userInformation(int user_id) {
-        /*if(accountService!=null)
-            return accountService.userInformation(user_id);*/
+        if(accountService!=null)
+            return accountService.userInformation(user_id);
         Map p=new HashMap();
+        //测试数据
         p.put("userName","Hestia");
         p.put("userRealName","LXH");
         p.put("ifFrozen",1);
@@ -73,6 +76,7 @@ public class AccountServiceWrapper implements AccountService{
 
     public List<Map<String, String>> agencyTradeInformation(int agency_id, String start_date, String end_date, int trade_type) {
         List<Map<String,String>> l=accountService.agencyTradeInformation(agency_id, start_date, end_date, trade_type);
+        //测试数据
         if(l==null)
         {
             System.out.println("NULL RESPONSE FROM AS");
@@ -80,7 +84,7 @@ public class AccountServiceWrapper implements AccountService{
             for(int i=0;i<3;i++)
             {
                 Map p=new HashMap<String,String>();
-                p.put("OrderID",i+1);
+                p.put("ID",i+1);
                 p.put("date_time","2018-06-04 12:00:00");
                 p.put("user_id",i*10+3);
                 p.put("type","转账");
@@ -94,14 +98,15 @@ public class AccountServiceWrapper implements AccountService{
 
     public List<Map<String, String>> userTradeInformation(int user_id, String start_date, String end_date, int trade_type) {
         List<Map<String, String>> l= accountService.userTradeInformation(user_id, start_date, end_date, trade_type);
-        if(l==null)
+        //测试数据
+        if(l==null||l.size()==0)
         {
             System.out.println("NULL RESPONSE FROM AS");
             l=new ArrayList<Map<String, String>>();
             for(int i=0;i<3;i++)
             {
                 Map p=new HashMap<String,String>();
-                p.put("OrderID",i+1);
+                p.put("ID",i+1);
                 p.put("date_time","2018-06-04 12:00:00");
                 p.put("user_id",i*10+5);
                 p.put("type","转账");

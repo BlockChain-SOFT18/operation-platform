@@ -97,8 +97,8 @@
     <orderEntry type="library" name="Maven: de.javakaffee:kryo-serializers:0.42" level="project" />
     <orderEntry type="library" name="Maven: de.ruedigermoeller:fst:2.48-jdk-6" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.6" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.46" level="project" />
     <orderEntry type="library" name="Maven: com.cedarsoftware:java-util:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.cedarsoftware:json-io:2.5.1" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.46" level="project" />
   </component>
 </module>

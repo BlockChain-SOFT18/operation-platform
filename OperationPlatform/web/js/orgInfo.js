@@ -1,15 +1,11 @@
 function loadXMLDoc()
 {
-    var arr = document.cookie.match(new RegExp("(^| )"+"userID"+"=([^;]*)(;|$)"));
-    var id;
-    if(arr==null)
-        id=2;
-    else id=arr[2];
+    var arr = document.cookie.match(new RegExp("(^| )"+"orgID"+"=([^;]*)(;|$)"));
     $.ajax({
         type:"POST",
-        url:"http://localhost:8080/OP/OrgInfo",
+        url:"../OrgInfo",
         dataType: "xml",
-        data:{orgID:id},
+        data:{orgID:arr[2]},
         success: function (data) {
             var info=data.getElementsByTagName("Info");
             document.getElementById("ID").innerHTML=info[0].firstChild.nodeValue;

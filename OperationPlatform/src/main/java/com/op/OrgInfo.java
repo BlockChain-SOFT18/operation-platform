@@ -12,14 +12,12 @@ public class OrgInfo extends HttpServlet{
     private String Classification;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
         response.setContentType("text/xml;charset=UTF-8");
         PrintWriter out = response.getWriter();
         String orgID=request.getParameter("orgID");
         int id=Integer.valueOf(orgID).intValue();
         Map p=DubboHandler.INSTANCE.accountService.agencyInformation(id);
-        System.out.println(134534534);
         Classification="学校";
 
         out.println("<Information> \n ");
@@ -33,8 +31,7 @@ public class OrgInfo extends HttpServlet{
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
         doGet(request,response);
     }
 

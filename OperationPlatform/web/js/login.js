@@ -22,27 +22,27 @@ function validate1() {
     var password=document.getElementById("pwd1").value;
     $.ajax({
         type:"POST",
-        url:"http://localhost:8080/OP/Login",
+        url:"../Login",
         dataType: "xml",
         data:{UserName:username,Password:password,Type:1},
         success: function (data) {
             var info=data.getElementsByTagName("Info");
-            var flag=((info[0].firstChild.nodeValue)!="false");
-            if (!flag)
+            var flag=info[0].firstChild.nodeValue;
+            if (flag=="-1")
                 alert("用户名或密码不正确，请重新登录 !");
             else {
                 var Days = 30;
                 var exp　= new Date();
                 exp.setTime(exp.getTime() + Days*24*60*60*1000);
-                document.cookie = "userID" + "="+ escape (data) + "";expires="" + exp.toGMTString();
+                document.cookie = "userID" + "="+ escape(flag) + "";expires="" + exp.toGMTString();
                 location.href ="./userInfo.html";
                 location.href="./userTradeCheck.html";
                 window.location.href="./userInfo.html";
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown,data) {
-            alert(XMLHttpRequest.readyState);
             alert(XMLHttpRequest.status);
+            alert(XMLHttpRequest.readyState);
             alert(textStatus);
         }
     });
@@ -53,19 +53,19 @@ function validate2() {
     var password=document.getElementById("pwd2").value;
     $.ajax({
         type:"POST",
-        url:"http://localhost:8080/OP/Login",
+        url:"../Login",
         dataType: "xml",
         data:{UserName:username,Password:password,Type:2},
         success: function (data) {
             var info=data.getElementsByTagName("Info");
-            var flag=((info[0].firstChild.nodeValue)!="false");
-            if (!flag)
+            var flag=info[0].firstChild.nodeValue;
+            if (flag=="-1")
                 alert("用户名或密码不正确，请重新登录 !");
             else {
                 var Days = 30;
                 var exp　= new Date();
                 exp.setTime(exp.getTime() + Days*24*60*60*1000);
-                document.cookie = "orgID" + "="+ escape (data) + "";expires="" + exp.toGMTString();
+                document.cookie = "orgID" + "="+ escape(flag) + "";expires="" + exp.toGMTString();
                 location.href ="./orgInfo.html";
                 location.href="./tradeCheck.html";
                 location.href="./fileDownload.html";
@@ -77,8 +77,8 @@ function validate2() {
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown,data) {
-            alert(XMLHttpRequest.readyState);
             alert(XMLHttpRequest.status);
+            alert(XMLHttpRequest.readyState);
             alert(textStatus);
         }
     });

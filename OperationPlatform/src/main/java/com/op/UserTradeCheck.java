@@ -4,6 +4,7 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import java.io.*;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.ServletException;
@@ -19,13 +20,18 @@ public class UserTradeCheck extends HttpServlet{
             throws ServletException, IOException
     {
         String userID=request.getParameter("userID");
-        //getInfo(userID);
         response.setContentType("text/html;charset=UTF-8");
         String tradeType=request.getParameter("TradeType");
         String startDate=request.getParameter("StartDate");
         String endDate=request.getParameter("EndDate");
         int id=Integer.valueOf(userID).intValue();
-        int type=Integer.valueOf(userID).intValue();
+        int type=0;
+        if(tradeType.equals("充值"))
+            type=0;
+        else if(tradeType.equals("提现"))
+            type=1;
+        else if(tradeType.equals("转账"))
+            type=2;
         List<Map<String,String>> l=DubboHandler.INSTANCE.accountService.userTradeInformation(id,startDate,endDate,type);
 
         PrintWriter out = response.getWriter();
@@ -34,7 +40,12 @@ public class UserTradeCheck extends HttpServlet{
         {
             JSONObject jsonObject=new JSONObject();
             Map p=l.get(i);
-            jsonObject.put("OrderID",p.get("OrderID").toString());
+            Iterator it = p.entrySet().iterator();
+            while(it.hasNext()){
+                Map.Entry m=(Map.Entry)it.next();
+                System.out.println(m.getKey() + ":" + m.getValue());
+            }
+            jsonObject.put("OrderID",p.get("ID").toString());
             jsonObject.put("OrderTime",p.get("date_time").toString());
             jsonObject.put("UserID",p.get("user_id").toString());
             jsonObject.put("TradeType",p.get("type").toString());
@@ -45,8 +56,7 @@ public class UserTradeCheck extends HttpServlet{
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
         doGet(request,response);
     }
 

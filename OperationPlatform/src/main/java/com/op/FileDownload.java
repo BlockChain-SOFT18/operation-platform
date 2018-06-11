@@ -28,7 +28,7 @@ public class FileDownload extends HttpServlet{
 
         String s=DubboHandler.INSTANCE.csSystem.DownloadFile(accountTime);
         System.out.println(s);
-        JSONObject json = new JSONObject();
+        JSONObject json = new JSONObject(s);
         searchInfo(orgID, fileType, accountType, accountTime);
         for (int i = 0; i < FileName.length; i++)
         {

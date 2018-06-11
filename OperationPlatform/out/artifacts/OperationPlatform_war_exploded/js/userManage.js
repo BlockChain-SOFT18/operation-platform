@@ -7,9 +7,9 @@ app.controller('customersCtrl', function($scope, $http) {
         var postData=$.param({orgID:arr[2],att:att});
         $http({
             method:"POST",
-            url:"http://localhost:8080/OP/UserManage",
+            url:"../UserManage",
             headers : {
-                'Content-Type' : "application/x-www-form-urlencoded;Charset=UTF-8"
+                'Content-Type' : "application/x-www-form-urlencoded;charset=UTF-8"
             },
             data:postData
         }).then(function (result) {
@@ -23,16 +23,12 @@ app.controller('customersCtrl', function($scope, $http) {
         var userName=document.getElementById("UserName").value;
         var state=document.getElementById("State").value;
         var att="Search";
-        var id;
-        if(arr==null)
-            id=2;
-        else id=arr[2];
-        var postData=$.param({orgID:id,UserID:userID,UserName:userName, State:state,att:att});
+        var postData=$.param({orgID:arr[2],UserID:userID,UserName:userName, State:state,att:att});
         $http({
             method:"POST",
-            url:"http://localhost:8080/OP/UserManage",
+            url:"../UserManage",
             headers : {
-                'Content-Type' : "application/x-www-form-urlencoded;Charset=UTF-8"
+                'Content-Type' : "application/x-www-form-urlencoded;charset=UTF-8"
             },
             data:postData
         }).then(function (result) {
@@ -44,20 +40,17 @@ app.controller('customersCtrl', function($scope, $http) {
         var arr = document.cookie.match(new RegExp("(^| )"+"orgID"+"=([^;]*)(;|$)"));
         var att="Freeze";
         var changeID=$scope.Info[Count].UserID;
-        var id;
-        if(arr==null)
-            id=2;
-        else id=arr[2];
-        var postData=$.param({orgID:id,ChangeID:changeID,att:att});
+        var postData=$.param({orgID:arr[2],ChangeID:changeID,att:att});
         $http({
             method:"POST",
-            url:"http://localhost:8080/OP/UserManage",
+            url:"../UserManage",
             headers : {
-                'Content-Type' : "application/x-www-form-urlencoded;Charset=UTF-8"
+                'Content-Type' : "application/x-www-form-urlencoded;charset=UTF-8"
             },
             data:postData
         }).then(function (result) {
             alert(result.data.Info+" is Freeze!");
+            window.location.reload();
         });
     };
 
@@ -65,20 +58,17 @@ app.controller('customersCtrl', function($scope, $http) {
         var arr = document.cookie.match(new RegExp("(^| )"+"orgID"+"=([^;]*)(;|$)"));
         var att="Active";
         var changeID=$scope.Info[Count].UserID;
-        var id;
-        if(arr==null)
-            id=2;
-        else id=arr[2];
-        var postData=$.param({orgID:id,ChangeID:changeID,att:att});
+        var postData=$.param({orgID:arr[2],ChangeID:changeID,att:att});
         $http({
             method:"POST",
-            url:"http://localhost:8080/OP/UserManage",
+            url:"../UserManage",
             headers : {
-                'Content-Type' : "application/x-www-form-urlencoded;Charset=UTF-8"
+                'Content-Type' : "application/x-www-form-urlencoded;charset=UTF-8"
             },
             data:postData
         }).then(function (result) {
             alert(result.data.Info+" is Active!");
+            window.location.reload();
         });
     };
 

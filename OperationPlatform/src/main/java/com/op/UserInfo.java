@@ -3,6 +3,7 @@ package com.op;
 import org.apache.catalina.User;
 
 import java.io.*;
+import java.util.Iterator;
 import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,16 +24,21 @@ public class UserInfo extends HttpServlet{
         int id=Integer.valueOf(userID).intValue();
 
         out.println("<Information> \n ");
-        if(msg.equals("Freeze"))
-            out.println("<Info> \n "+ DubboHandler.INSTANCE.accountService.freezeUnfreeze(id,true) +" \n </Info> \n");
-        else if(msg.equals("Active"))
-            out.println("<Info> \n "+ DubboHandler.INSTANCE.accountService.freezeUnfreeze(id,false) +" \n </Info> \n");
+        if(msg.equals("Freeze")) {
+            int result=DubboHandler.INSTANCE.accountService.freezeUnfreeze(id, true);
+            out.println("<Info> \n " + result + " \n </Info> \n");
+        }
+        else if(msg.equals("Active")){
+            int result=DubboHandler.INSTANCE.accountService.freezeUnfreeze(id, false);
+            out.println("<Info> \n " + result + " \n </Info> \n");
+        }
         else if(msg.equals("ChangePwd"))
         {
             String pwd1=request.getParameter("pwd1");
             String pwd2=request.getParameter("pwd2");
             try {
-                boolean result = DubboHandler.INSTANCE.accountService.userPasswdChanging(id, pwd1, pwd2);
+                boolean result = DubboHandler.INSTANCE.accountService.userPasswdChanging(id, Encrypt.SHA256(pwd1), Encrypt.SHA256(pwd2));
+                System.out.println(result);
                 out.println("<Info> \n " + result + " \n </Info> \n");
             }catch (Exception e){
                 e.printStackTrace();
@@ -41,7 +47,7 @@ public class UserInfo extends HttpServlet{
         else if(msg.equals("Load"))
         {
             Map p=DubboHandler.INSTANCE.accountService.userInformation(id);
-            if(p.get("ifFrozen").toString()=="1")
+            if(p.get("ifFrozen").toString().equals("true"))
                 State="冻结";
             else State="激活";
             out.println("<Info> \n "+ userID +" \n </Info> \n");
