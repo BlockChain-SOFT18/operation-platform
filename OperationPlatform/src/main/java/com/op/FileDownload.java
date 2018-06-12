@@ -44,8 +44,12 @@ public class FileDownload extends HttpServlet{
         else if(accountTime.equals("最近3天"))
             days=3;
 
+
         String s=DubboHandler.INSTANCE.csSystem.DownloadFile(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date().getTime()-days*24*60*60*1000));
         System.out.println(s);
+        String a="";
+        String ss=DubboHandler.INSTANCE.csSystem.DownloadFile(a);
+        System.out.println(ss);
         JSONArray jsonArray=JSONArray.fromString(s);
         JSONObject json = new JSONObject();
         ArrayList<JSONObject> array=new ArrayList<JSONObject>();

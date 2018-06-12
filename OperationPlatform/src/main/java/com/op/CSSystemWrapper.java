@@ -30,9 +30,9 @@ public class CSSystemWrapper implements CSSystem{
             return csSystem.QueryRecord(StartDate,EndDate,Type);
         //测试数据
         return "[" +
-                "{Request_id:1,Request_time:'2018-6-10 10:10:10.0',Merchant_id:19,Amt:10.0,Operate_status:'已清分'}," +
-                "{Request_id:3,Request_time:'2018-6-10 12:36:23.0',Merchant_id:15,Amt:17.3,Operate_status:'已清分'}," +
-                "{Request_id:6,Request_time:'2018-6-10 16:57:45.0',Merchant_id:16,Amt:200.0,Operate_status:'已清分'}," +
+                "{requestID:1,requestTime:'2018-6-10 10:10:10.0',userID:19,amount:10.0,method:0}," +
+                "{requestID:3,requestTime:'2018-6-11 17:33:39.0',userID:19,amount:200.0,method:0}," +
+                "{requestID:7,requestTime:'2018-6-12 21:26:44.0',userID:19,amount:50.0,method:0}," +
                 "]";
     }
 

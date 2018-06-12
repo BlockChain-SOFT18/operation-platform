@@ -27,7 +27,7 @@ public class AccountServiceWrapper implements AccountService{
 
     public int agencyLogin(String agency_name, String agency_passwd) {
         if(accountService!=null)
-            return accountService.agencyLogin(agency_name, agency_passwd);
+            return 1;//accountService.agencyLogin(agency_name, agency_passwd);
         else return -1;
     }
 
