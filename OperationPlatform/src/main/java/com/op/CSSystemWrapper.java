@@ -26,8 +26,8 @@ public class CSSystemWrapper implements CSSystem{
     }
 
     public String QueryRecord(String StartDate, String EndDate, int Type) throws TimeOutOfRangeException, OperatorIdOutOfRangeException{
-        /*if(csSystem!=null)
-            return csSystem.QueryRecord(StartDate,EndDate,Type);*/
+        if(csSystem!=null)
+            return csSystem.QueryRecord(StartDate,EndDate,Type);
         //测试数据
         return "[" +
                 "{Request_id:1,Request_time:'2018-6-10 10:10:10.0',Merchant_id:19,Amt:10.0,Operate_status:'已清分'}," +
@@ -37,8 +37,8 @@ public class CSSystemWrapper implements CSSystem{
     }
 
     public String DownloadFile(String Date) throws TimeOutOfRangeException{
-        /*if(csSystem!=null)
-            return csSystem.DownloadFile(Date);*/
+        if(csSystem!=null)
+            return csSystem.DownloadFile(Date);
         //测试数据
         return "[" +
                 "{FileName:'支付宝',Address:'http://www.alibaba.com'}," +

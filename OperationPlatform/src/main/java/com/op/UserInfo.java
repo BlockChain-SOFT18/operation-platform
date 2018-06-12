@@ -15,8 +15,7 @@ public class UserInfo extends HttpServlet{
     private String State;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
         response.setContentType("text/xml;charset=UTF-8");
         PrintWriter out = response.getWriter();
         String userID=request.getParameter("userID");
@@ -26,11 +25,11 @@ public class UserInfo extends HttpServlet{
         out.println("<Information> \n ");
         if(msg.equals("Freeze")) {
             int result=DubboHandler.INSTANCE.accountService.freezeUnfreeze(id, true);
-            out.println("<Info> \n " + result + " \n </Info> \n");
+            out.println("<Info>" + result + "</Info> \n");
         }
         else if(msg.equals("Active")){
             int result=DubboHandler.INSTANCE.accountService.freezeUnfreeze(id, false);
-            out.println("<Info> \n " + result + " \n </Info> \n");
+            out.println("<Info>" + result + "</Info> \n");
         }
         else if(msg.equals("ChangePwd"))
         {
@@ -39,8 +38,9 @@ public class UserInfo extends HttpServlet{
             try {
                 boolean result = DubboHandler.INSTANCE.accountService.userPasswdChanging(id, Encrypt.SHA256(pwd1), Encrypt.SHA256(pwd2));
                 System.out.println(result);
-                out.println("<Info> \n " + result + " \n </Info> \n");
+                out.println("<Info>" + result + "</Info> \n");
             }catch (Exception e){
+                out.println("<Info>" + false + "</Info> \n");
                 e.printStackTrace();
             }
         }
@@ -59,8 +59,7 @@ public class UserInfo extends HttpServlet{
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
         doGet(request,response);
     }
 

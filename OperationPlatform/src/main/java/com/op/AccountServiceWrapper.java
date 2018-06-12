@@ -13,17 +13,21 @@ public class AccountServiceWrapper implements AccountService{
         this.accountService=accountService;
     }
 
-    public int userLogin(String user_name, String user_passwd) throws UserNotExistException, UserFrozenException {
+    public int userLogin(String user_name, String user_passwd){
         if(accountService!=null)
-            return 19;//测试数据
-            // accountService.userLogin(user_name, user_passwd);
+            try {
+                return accountService.userLogin(user_name, user_passwd);
+            }catch (Exception e){
+                if(e instanceof UserNotExistException)
+                    return -1;
+                else return -2;
+            }
         else return -1;
     }
 
     public int agencyLogin(String agency_name, String agency_passwd) {
         if(accountService!=null)
-            return 2;//测试数据
-        //accountService.agencyLogin(agency_name,agency_passwd);
+            return accountService.agencyLogin(agency_name, agency_passwd);
         else return -1;
     }
 

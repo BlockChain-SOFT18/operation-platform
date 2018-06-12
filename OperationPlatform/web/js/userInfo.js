@@ -77,6 +77,7 @@ function ChangePwd() {
             if (!flag)
                 alert("密码修改失败 !");
             else alert("密码修改成功 !");
+            window.location.reload();
         },
         error: function(XMLHttpRequest, textStatus, errorThrown,data) {
             alert(XMLHttpRequest.status);

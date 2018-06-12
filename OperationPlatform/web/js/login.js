@@ -30,6 +30,8 @@ function validate1() {
             var flag=info[0].firstChild.nodeValue;
             if (flag=="-1")
                 alert("用户名或密码不正确，请重新登录 !");
+            else if (flag=="-2")
+                alert("用户冻结，请联系管理员进行激活 !");
             else {
                 var Days = 30;
                 var exp　= new Date();
