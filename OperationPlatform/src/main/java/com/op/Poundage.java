@@ -4,6 +4,7 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import java.io.*;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +27,7 @@ public class Poundage extends HttpServlet{
 
         PrintWriter out = response.getWriter();
         JSONObject json=new JSONObject();
+        ArrayList<JSONObject> array=new ArrayList<JSONObject>();
         for(int i=0;i<Time.length;i++)
         {
             if(channel.equals(OrgName[i])) {
@@ -35,9 +37,10 @@ public class Poundage extends HttpServlet{
                 jsonObject.put("Fee", Fee[i]);
                 jsonObject.put("TradeType", TradeType[i]);
                 jsonObject.put("OrgName", OrgName[i]);
-                json.put("Info", jsonObject);
+                array.add(jsonObject);
             }
         }
+        json.put("Info",array);
         out.println(json);
     }
 

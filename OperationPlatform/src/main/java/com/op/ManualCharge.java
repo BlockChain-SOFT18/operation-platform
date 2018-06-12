@@ -6,6 +6,7 @@ import net.sf.json.JSONObject;
 import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,6 +25,7 @@ public class ManualCharge extends HttpServlet{
         PrintWriter out = response.getWriter();
 
         JSONObject json=new JSONObject();
+        ArrayList<JSONObject> array=new ArrayList<JSONObject>();
         if(att.equals("Search"))
         {
             String tradeType=request.getParameter("TradeType");
@@ -55,8 +57,9 @@ public class ManualCharge extends HttpServlet{
                 jsonObject.put("TradeType",tradeType);
                 jsonObject.put("TradeMoney",jo.get("Amt"));
                 jsonObject.put("TradeState",jo.get("Operate_status"));
-                json.put("Info",jsonObject);
+                array.add(jsonObject);
             }
+            json.put("Info",array);
         }
         else if(att.equals("Adjust"))
         {

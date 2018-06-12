@@ -4,6 +4,7 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import java.io.*;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,8 +15,7 @@ public class TradeInfo extends HttpServlet{
     private String[] Date,Money,RealCount,TotalCount,TransferRate;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
         String orgID=request.getParameter("orgID");
         getInfo(orgID);
         response.setContentType("text/html;charset=UTF-8");
@@ -25,6 +25,7 @@ public class TradeInfo extends HttpServlet{
 
         PrintWriter out = response.getWriter();
         JSONObject json=new JSONObject();
+        ArrayList<JSONObject> array=new ArrayList<JSONObject>();
         for(int i=0;i<Date.length;i++)
         {
             JSONObject jsonObject=new JSONObject();
@@ -33,14 +34,14 @@ public class TradeInfo extends HttpServlet{
             jsonObject.put("RealCount",RealCount[i]);
             jsonObject.put("TotalCount",TotalCount[i]);
             jsonObject.put("TransferRate",TransferRate[i]);
-            json.put("Info",jsonObject);
+            array.add(jsonObject);
         }
+        json.put("Info",array);
         out.println(json);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
+            throws ServletException, IOException {
         doGet(request,response);
     }
 

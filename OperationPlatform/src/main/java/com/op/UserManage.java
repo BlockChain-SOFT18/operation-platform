@@ -4,6 +4,7 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.ServletException;
@@ -24,6 +25,7 @@ public class UserManage extends HttpServlet{
         int id=Integer.valueOf(orgID).intValue();
 
         JSONObject json=new JSONObject();
+        ArrayList<JSONObject> array=new ArrayList<JSONObject>();
         if(att.equals("List"))
         {
             List<Integer> l=DubboHandler.INSTANCE.accountService.agencyAllUser(id);
@@ -37,8 +39,9 @@ public class UserManage extends HttpServlet{
                 jsonObject.put("UserID",l.get(i));
                 jsonObject.put("UserName",p.get("userName").toString());
                 jsonObject.put("State",State);
-                json.put("Info",jsonObject);
+                array.add(jsonObject);
             }
+            json.put("Info",array);
         }
         else if(att.equals("Search"))
         {
@@ -64,9 +67,10 @@ public class UserManage extends HttpServlet{
                     jsonObject.put("UserID",l.get(i));
                     jsonObject.put("UserName",p.get("userName").toString());
                     jsonObject.put("State",State);
-                    json.put("Info",jsonObject);
+                    array.add(jsonObject);
                 }
             }
+            json.put("Info",array);
         }
         else if(att.equals("Freeze"))
         {

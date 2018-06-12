@@ -9,6 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -47,6 +48,7 @@ public class FileDownload extends HttpServlet{
         System.out.println(s);
         JSONArray jsonArray=JSONArray.fromString(s);
         JSONObject json = new JSONObject();
+        ArrayList<JSONObject> array=new ArrayList<JSONObject>();
         for (int i = 0; i < jsonArray.length(); i++)
         {
             JSONObject jo=jsonArray.getJSONObject(i);
@@ -54,8 +56,9 @@ public class FileDownload extends HttpServlet{
             jsonObject.put("No", i+1);
             jsonObject.put("FileName", jo.get("FileName"));
             jsonObject.put("Address", jo.get("Address"));
-            json.put("Info", jsonObject);
+            array.add(jsonObject);
         }
+        json.put("Info",array);
         out.println(json);
     }
 

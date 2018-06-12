@@ -4,6 +4,7 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -33,6 +34,7 @@ public class TradeCheck extends HttpServlet{
 
         PrintWriter out = response.getWriter();
         JSONObject json=new JSONObject();
+        ArrayList<JSONObject> array=new ArrayList<JSONObject>();
         for(int i=0;i<l.size();i++)
         {
             JSONObject jsonObject=new JSONObject();
@@ -47,8 +49,9 @@ public class TradeCheck extends HttpServlet{
             jsonObject.put("UserID",p.get("user_id").toString());
             jsonObject.put("TradeType",p.get("type").toString());
             jsonObject.put("TradeMoney",p.get("sum").toString());
-            json.put("Info",jsonObject);
+            array.add(jsonObject);
         }
+        json.put("Info",array);
         out.println(json);
     }
 
