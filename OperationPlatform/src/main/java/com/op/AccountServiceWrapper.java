@@ -27,7 +27,7 @@ public class AccountServiceWrapper implements AccountService{
 
     public int agencyLogin(String agency_name, String agency_passwd) {
         if(accountService!=null)
-            return 1;//accountService.agencyLogin(agency_name, agency_passwd);
+            return accountService.agencyLogin(agency_name, agency_passwd);
         else return -1;
     }
 
@@ -85,16 +85,6 @@ public class AccountServiceWrapper implements AccountService{
         {
             System.out.println("NULL RESPONSE FROM AS");
             l=new ArrayList<Map<String, String>>();
-            for(int i=0;i<3;i++)
-            {
-                Map p=new HashMap<String,String>();
-                p.put("ID",i+1);
-                p.put("date_time","2018-06-04 12:00:00");
-                p.put("user_id",i*10+3);
-                p.put("type","转账");
-                p.put("sum",100.00);
-                l.add(p);
-            }
             return l;
         }
         else return l;
@@ -103,20 +93,10 @@ public class AccountServiceWrapper implements AccountService{
     public List<Map<String, String>> userTradeInformation(int user_id, String start_date, String end_date, int trade_type) {
         List<Map<String, String>> l= accountService.userTradeInformation(user_id, start_date, end_date, trade_type);
         //测试数据
-        if(l==null||l.size()==0)
+        if(l==null)
         {
             System.out.println("NULL RESPONSE FROM AS");
             l=new ArrayList<Map<String, String>>();
-            for(int i=0;i<3;i++)
-            {
-                Map p=new HashMap<String,String>();
-                p.put("ID",i+1);
-                p.put("date_time","2018-06-04 12:00:00");
-                p.put("user_id",i*10+5);
-                p.put("type","转账");
-                p.put("sum",100.00);
-                l.add(p);
-            }
             return l;
         }
         else return l;

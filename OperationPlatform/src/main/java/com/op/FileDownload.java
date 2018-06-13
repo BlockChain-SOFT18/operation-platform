@@ -37,19 +37,15 @@ public class FileDownload extends HttpServlet{
         else if(accountType.equals("消费"))
             type=3;
         int days=0;
-        if(accountTime.equals("最近15天"))
-            days=15;
+        if(accountTime.equals("最近14天"))
+            days=14;
         else if(accountTime.equals("最近7天"))
             days=7;
         else if(accountTime.equals("最近3天"))
             days=3;
 
-
         String s=DubboHandler.INSTANCE.csSystem.DownloadFile(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date().getTime()-days*24*60*60*1000));
         System.out.println(s);
-        String a="";
-        String ss=DubboHandler.INSTANCE.csSystem.DownloadFile(a);
-        System.out.println(ss);
         JSONArray jsonArray=JSONArray.fromString(s);
         JSONObject json = new JSONObject();
         ArrayList<JSONObject> array=new ArrayList<JSONObject>();
@@ -58,7 +54,7 @@ public class FileDownload extends HttpServlet{
             JSONObject jo=jsonArray.getJSONObject(i);
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("No", i+1);
-            jsonObject.put("FileName", jo.get("FileName"));
+            jsonObject.put("FileName", jo.get("Name"));
             jsonObject.put("Address", jo.get("Address"));
             array.add(jsonObject);
         }

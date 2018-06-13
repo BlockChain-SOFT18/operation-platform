@@ -52,13 +52,13 @@ public class TradeInfo extends HttpServlet{
         TotalCount=new String[2];
         TransferRate=new String[2];
 
-        Date[0]="2018/4/1";
+        Date[0]="2018/6/9";
         Money[0]="10000";
         RealCount[0]="15";
         TotalCount[0]="17";
         TransferRate[0]=String.valueOf((double)Math.round(Double.valueOf(RealCount[0])/Double.valueOf(TotalCount[0])*10000)/100)+"%";
 
-        Date[1]="2018/4/2";
+        Date[1]="2018/6/10";
         Money[1]="13000";
         RealCount[1]="13";
         TotalCount[1]="19";

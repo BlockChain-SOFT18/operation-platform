@@ -38,12 +38,13 @@ public class ManualCharge extends HttpServlet{
                 type=2;
             String time=request.getParameter("Time");
             int days=0;
-            if(time.equals("最近15天"))
-                days=15;
+            if(time.equals("最近14天"))
+                days=14;
             else if(time.equals("最近7天"))
                 days=7;
             else if(time.equals("最近3天"))
                 days=3;
+
             DateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String s=DubboHandler.INSTANCE.csSystem.QueryRecord(df.format(new Date().getTime()-days*24*60*60*1000),df.format(new Date()),type);
             System.out.println(s);
