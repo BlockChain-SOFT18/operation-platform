@@ -21,7 +21,9 @@ public class TradeCheck extends HttpServlet{
         response.setContentType("text/html;charset=UTF-8");
         String tradeType=request.getParameter("TradeType");
         String startDate=request.getParameter("StartDate");
+        startDate+=" 00:00:00";
         String endDate=request.getParameter("EndDate");
+        endDate+=" 23:59:59";
         int id=Integer.valueOf(orgID).intValue();
         int type=0;
         if(tradeType.equals("充值"))
@@ -40,15 +42,20 @@ public class TradeCheck extends HttpServlet{
             JSONObject jsonObject=new JSONObject();
             Map p=l.get(i);
             Iterator it = p.entrySet().iterator();
-            while(it.hasNext()){
-                Map.Entry m=(Map.Entry)it.next();
-                System.out.println(m.getKey() + ":" + m.getValue());
+            Map.Entry m=(Map.Entry)it.next();
+            jsonObject.put("OrderID",m.getKey().toString());
+            try {
+                JSONObject js = JSONObject.fromObject(m.getValue());
+                System.out.println(js);
+                jsonObject.put("OrderTime", js.get("date_time").toString());
+                if(type==2)
+                    jsonObject.put("UserID", js.get("payment_user_id").toString());
+                else jsonObject.put("UserID", js.get("user_id").toString());
+                jsonObject.put("TradeType", js.get("type").toString());
+                jsonObject.put("TradeMoney", js.get("sum").toString());
+            }catch (Exception e){
+                System.out.println("Make IDE happy");
             }
-            jsonObject.put("OrderID",p.get("ID").toString());
-            jsonObject.put("OrderTime",p.get("date_time").toString());
-            jsonObject.put("UserID",p.get("user_id").toString());
-            jsonObject.put("TradeType",p.get("type").toString());
-            jsonObject.put("TradeMoney",p.get("sum").toString());
             array.add(jsonObject);
         }
         json.put("Info",array);

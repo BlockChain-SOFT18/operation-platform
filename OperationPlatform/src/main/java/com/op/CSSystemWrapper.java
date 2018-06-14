@@ -18,11 +18,11 @@ public class CSSystemWrapper implements CSSystem{
     }
 
     public String Withdraw(String var1, String var2, double var3, boolean var5, String var6) throws RequestException{
-        return "233";
+        return "2333";
     }
 
     public String Trade(String var1, String var2, String var3, double var4, String var6) throws RequestException{
-        return "233";
+        return "2333";
     }
 
     public String QueryRecord(String StartDate, String EndDate, int Type) throws TimeOutOfRangeException, OperatorIdOutOfRangeException{
