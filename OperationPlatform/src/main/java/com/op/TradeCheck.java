@@ -48,10 +48,19 @@ public class TradeCheck extends HttpServlet{
                 JSONObject js = JSONObject.fromObject(m.getValue());
                 System.out.println(js);
                 jsonObject.put("OrderTime", js.get("date_time").toString());
-                if(type==2)
-                    jsonObject.put("UserID", js.get("payment_user_id").toString());
-                else jsonObject.put("UserID", js.get("user_id").toString());
-                jsonObject.put("TradeType", js.get("type").toString());
+                if(type==2) {
+                    jsonObject.put("CollectionUserID", js.get("collection_user_id").toString());
+                    jsonObject.put("PaymentUserID", js.get("payment_user_id").toString());
+                }
+                else if(type==0){
+                    jsonObject.put("CollectionUserID", js.get("collection_user_id").toString());
+                    jsonObject.put("PaymentUserID", "");
+                }
+                else {
+                    jsonObject.put("CollectionUserID", "");
+                    jsonObject.put("PaymentUserID", js.get("payment_user_id").toString());
+                }
+                jsonObject.put("TradeType", js.get("type").equals("true")?"成功":"失败");
                 jsonObject.put("TradeMoney", js.get("sum").toString());
             }catch (Exception e){
                 System.out.println("Make IDE happy");

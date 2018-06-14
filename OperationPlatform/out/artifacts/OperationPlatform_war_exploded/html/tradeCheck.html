@@ -160,15 +160,17 @@
                                     <tr>
                                         <th>商户订单号</th>
                                         <th>订单创建时间</th>
-                                        <th>用户ID</th>
-                                        <th>交易类型</th>
+                                        <th>付款用户ID</th>
+                                        <th>收款用户ID</th>
+                                        <th>交易状态</th>
                                         <th>交易金额（元）</th>
                                     </tr>
                                     </thead>
                                     <tr ng-repeat="x in Info">
                                         <td>{{ x.OrderID }}</td>
                                         <td>{{ x.OrderTime }}</td>
-                                        <td>{{ x.UserID }}</td>
+                                        <td>{{ x.PaymentUserID }}</td>
+                                        <td>{{ x.CollectionUserID }}</td>
                                         <td>{{ x.TradeType }}</td>
                                         <td>{{ x.TradeMoney }}</td>
                                     </tr>
