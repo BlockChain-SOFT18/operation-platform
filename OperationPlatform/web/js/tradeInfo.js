@@ -2,11 +2,11 @@ function loadXMLDoc() {
     Morris.Line({
         element: 'myfirstchart',
         data: [
-            { year: '2014', value: 20 },
-            { year: '2015', value: 10 },
-            { year: '2016', value: 5 },
-            { year: '2017', value: 5 },
-            { year: '2018', value: 20 }
+            { year: '2014', value: 13 },
+            { year: '2015', value: 17 },
+            { year: '2016', value: 25 },
+            { year: '2017', value: 29 },
+            { year: '2018', value: 33 }
         ],
         xkey: 'year',
         ykeys: ['value'],
