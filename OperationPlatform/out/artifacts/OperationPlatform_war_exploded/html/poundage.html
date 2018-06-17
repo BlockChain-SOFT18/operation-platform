@@ -105,15 +105,14 @@
                                                 <div class="form-group">
                                                     <label>账期</label>
                                                     <div class="row">
-
                                                         <div class="col-lg-5">
-                                                            <input type="date" class="form-control" id="StartDate">
+                                                            <input class="form-control" id="StartDate">
                                                         </div>
                                                         <div class="col-lg-2">
-                                                            <label style="color: #8d8888">-----------------</label>
+                                                            <label style="color: #8d8888; align-content: center" >---------</label>
                                                         </div>
                                                         <div class="col-lg-5">
-                                                            <input type="date" class="form-control" id="EndDate">
+                                                            <input class="form-control" id="EndDate">
                                                         </div>
 
                                                     </div>
@@ -158,8 +157,9 @@
                                     <thead>
                                     <tr>
                                         <th>账期</th>
-                                        <th>机构资金</th>
+                                        <th>金额</th>
                                         <th>手续费</th>
+                                        <th>交易类型</th>
                                         <th>商户</th>
                                     </tr>
                                     </thead>
@@ -167,6 +167,7 @@
                                         <td>{{ x.Time }}</td>
                                         <td>{{ x.Money }}</td>
                                         <td>{{ x.Fee }}</td>
+                                        <td>{{ x.TradeType }}</td>
                                         <td>{{ x.OrgName }}</td>
                                     </tr>
                                 </table>
