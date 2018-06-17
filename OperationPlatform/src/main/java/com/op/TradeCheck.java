@@ -51,18 +51,16 @@ public class TradeCheck extends HttpServlet{
                 if(type==2) {
                     jsonObject.put("CollectionUserID", js.get("collection_user_id").toString());
                     jsonObject.put("PaymentUserID", js.get("payment_user_id").toString());
-                    jsonObject.put("TradeType", js.get("type").equals("true")?"消费":"转账");
                 }
                 else if(type==0){
-                    jsonObject.put("CollectionUserID", js.get("user_id").toString());
+                    jsonObject.put("CollectionUserID", js.get("collection_user_id").toString());
                     jsonObject.put("PaymentUserID", "");
-                    jsonObject.put("TradeType", "充值");
                 }
                 else {
                     jsonObject.put("CollectionUserID", "");
-                    jsonObject.put("PaymentUserID", js.get("user_id").toString());
-                    jsonObject.put("TradeType", "提现");
+                    jsonObject.put("PaymentUserID", js.get("payment_user_id").toString());
                 }
+                jsonObject.put("TradeType", js.get("type").equals("true")?"成功":"失败");
                 jsonObject.put("TradeMoney", js.get("sum").toString());
             }catch (Exception e){
                 System.out.println("Make IDE happy");
