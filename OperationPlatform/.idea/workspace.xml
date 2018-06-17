@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
@@ -20,9 +20,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_6_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_6_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/../文档/软件需求说明书（综合运营平台）.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../文档/软件需求说明书（综合运营平台）.docx" afterDir="false" />
-=======
 <<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/OperationPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OperationPlatform.iml" afterDir="false" />
 =======
