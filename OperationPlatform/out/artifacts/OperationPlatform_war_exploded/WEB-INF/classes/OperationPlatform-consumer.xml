@@ -11,6 +11,7 @@
     <dubbo:application name="OperationPlatform-consumer"/>
     <dubbo:registry address="zookeeper://140.143.4.171:2181"/>
     <dubbo:reference id="accountService" interface="buaa.jj.accountservice.api.AccountService"/>
+    <dubbo:reference id="druid" interface="buaa.jj.accountservice.api.Druid"/>
     <dubbo:reference id="csSystem" interface="com.altale.service.CSSystem"/>
 
 </beans>
